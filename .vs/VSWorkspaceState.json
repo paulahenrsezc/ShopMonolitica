@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ShopMonolitica.Web"
   ],
-  "SelectedNode": "\\C:\\Shop\\ShopMonolitica",
+  "SelectedNode": "\\ShopMonolitica.Web\\ShopMonolitica.Web.sln",
   "PreviewInSolutionExplorer": false
 }
