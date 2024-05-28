@@ -1,6 +1,8 @@
-﻿namespace ShopMonolitica.Web.BL.Services
+﻿using ShopMonolitica.Web.BL.Core;
+
+namespace ShopMonolitica.Web.BL.Services
 {
-    public class OrderDetailsService
+    public class OrderDetailsService:IOrderDetailsService
     {
     }
 }

@@ -1,6 +1,7 @@
-﻿namespace ShopMonolitica.Web.BL.Interfaces
+﻿namespace ShopMonolitica.Web.BL.Core
 {
-    public class IOrderDetailsService
+    public interface IOrderDetailsService
     {
+
     }
 }

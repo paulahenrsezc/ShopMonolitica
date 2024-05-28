@@ -1,6 +1,6 @@
 ﻿namespace ShopMonolitica.Web.BL.Dtos
 {
-    public class OrderDetailsDtoAdd
+    public record OrderDetailsDtoAdd
     {
     }
 }
