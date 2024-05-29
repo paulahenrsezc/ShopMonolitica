@@ -1,6 +1,6 @@
 ﻿namespace ShopMonolitica.Web.Data.DbObjects
 {
-    public class OrdersDb
+    public class UsersDb
     {
 
     }
