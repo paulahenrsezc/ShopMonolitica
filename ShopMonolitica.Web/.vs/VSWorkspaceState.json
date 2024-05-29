@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ShopMonolitica.Web",
+    "\\ShopMonolitica.Web\\bin",
+    "\\ShopMonolitica.Web\\BL",
+    "\\ShopMonolitica.Web\\BL\\Dtos",
+    "\\ShopMonolitica.Web\\BL\\Services",
+    "\\ShopMonolitica.Web\\Data",
+    "\\ShopMonolitica.Web\\Data\\DbObjects",
+    "\\ShopMonolitica.Web\\Data\\Exceptions"
+  ],
+  "SelectedNode": "\\ShopMonolitica.Web\\Data\\DbObjects\\ShipperDb.cs",
+  "PreviewInSolutionExplorer": false
+}
