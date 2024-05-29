@@ -2,7 +2,8 @@
 
 namespace ShopMonolitica.Web.BL.Services
 {
-    public class EmployeesService:IEmployeesService
+    public class EmployeesService : IEmployeesService
     {
+
     }
 }
