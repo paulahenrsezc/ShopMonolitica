@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Data\\Context",
+    "\\Data\\Core",
+    "\\Data\\DbObjects",
+    "\\Data\\Entities",
+    "\\Data\\Exceptions",
+    "\\Data\\interfaces",
+    "\\Data\\Models",
+    "\\Models",
+    "\\wwwroot"
+  ],
+  "SelectedNode": "\\Models",
+  "PreviewInSolutionExplorer": false
+}

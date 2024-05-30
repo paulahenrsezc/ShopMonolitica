@@ -2,14 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\ShopMonolitica.Web",
-    "\\ShopMonolitica.Web\\bin",
-    "\\ShopMonolitica.Web\\BL",
-    "\\ShopMonolitica.Web\\BL\\Dtos",
-    "\\ShopMonolitica.Web\\BL\\Services",
     "\\ShopMonolitica.Web\\Data",
-    "\\ShopMonolitica.Web\\Data\\DbObjects",
-    "\\ShopMonolitica.Web\\Data\\Exceptions"
+    "\\ShopMonolitica.Web\\Data\\Entities",
+    "\\ShopMonolitica.Web\\Data\\Models",
+    "\\ShopMonolitica.Web\\Models",
+    "\\ShopMonolitica.Web\\obj",
+    "\\ShopMonolitica.Web\\Properties",
+    "\\ShopMonolitica.Web\\Views",
+    "\\ShopMonolitica.Web\\wwwroot"
   ],
-  "SelectedNode": "\\ShopMonolitica.Web\\Data\\DbObjects\\ShipperDb.cs",
   "PreviewInSolutionExplorer": false
 }
