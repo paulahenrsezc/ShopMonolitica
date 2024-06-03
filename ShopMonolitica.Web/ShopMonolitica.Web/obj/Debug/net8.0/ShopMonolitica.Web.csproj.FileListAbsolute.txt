@@ -29,3 +29,4 @@ C:\Shop\ShopMonolitica\ShopMonolitica.Web\ShopMonolitica.Web\obj\Debug\net8.0\Sh
 C:\Shop\ShopMonolitica\ShopMonolitica.Web\ShopMonolitica.Web\obj\Debug\net8.0\ShopMonolitica.Web.genruntimeconfig.cache
 C:\Shop\ShopMonolitica\ShopMonolitica.Web\ShopMonolitica.Web\obj\Debug\net8.0\ref\ShopMonolitica.Web.dll
 C:\Shop\ShopMonolitica\ShopMonolitica.Web\ShopMonolitica.Web\obj\Debug\net8.0\ShopMonolitica.Web.sourcelink.json
+C:\Shop\ShopMonolitica\ShopMonolitica.Web\ShopMonolitica.Web\obj\Debug\net8.0\ShopMonolitica.Web.csproj.AssemblyReference.cache

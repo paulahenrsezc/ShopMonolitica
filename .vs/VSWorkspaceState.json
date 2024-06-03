@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ShopMonolitica.Web",
+    "\\ShopMonolitica.Web\\ShopMonolitica.Web",
+    "\\ShopMonolitica.Web\\ShopMonolitica.Web\\Controllers"
   ],
-  "SelectedNode": "\\ShopMonolitica.Web.sln",
+  "SelectedNode": "\\ShopMonolitica.Web\\ShopMonolitica.Web\\Controllers\\HomeController.cs",
   "PreviewInSolutionExplorer": false
 }
