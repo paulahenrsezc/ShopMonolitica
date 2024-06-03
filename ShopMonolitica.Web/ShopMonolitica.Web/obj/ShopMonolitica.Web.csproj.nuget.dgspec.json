@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\domin\\Source\\Repos\\paulahenrsezc\\ShopMonolitica\\ShopMonolitica.Web\\ShopMonolitica.Web\\ShopMonolitica.Web.csproj": {}
+    "C:\\Shop\\ShopMonolitica\\ShopMonolitica.Web\\ShopMonolitica.Web\\ShopMonolitica.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\domin\\Source\\Repos\\paulahenrsezc\\ShopMonolitica\\ShopMonolitica.Web\\ShopMonolitica.Web\\ShopMonolitica.Web.csproj": {
+    "C:\\Shop\\ShopMonolitica\\ShopMonolitica.Web\\ShopMonolitica.Web\\ShopMonolitica.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\domin\\Source\\Repos\\paulahenrsezc\\ShopMonolitica\\ShopMonolitica.Web\\ShopMonolitica.Web\\ShopMonolitica.Web.csproj",
+        "projectUniqueName": "C:\\Shop\\ShopMonolitica\\ShopMonolitica.Web\\ShopMonolitica.Web\\ShopMonolitica.Web.csproj",
         "projectName": "ShopMonolitica.Web",
-        "projectPath": "C:\\Users\\domin\\Source\\Repos\\paulahenrsezc\\ShopMonolitica\\ShopMonolitica.Web\\ShopMonolitica.Web\\ShopMonolitica.Web.csproj",
+        "projectPath": "C:\\Shop\\ShopMonolitica\\ShopMonolitica.Web\\ShopMonolitica.Web\\ShopMonolitica.Web.csproj",
         "packagesPath": "C:\\Users\\domin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\domin\\Source\\Repos\\paulahenrsezc\\ShopMonolitica\\ShopMonolitica.Web\\ShopMonolitica.Web\\obj\\",
+        "outputPath": "C:\\Shop\\ShopMonolitica\\ShopMonolitica.Web\\ShopMonolitica.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\domin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,6 +44,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

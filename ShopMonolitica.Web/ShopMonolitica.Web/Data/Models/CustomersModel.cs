@@ -1,8 +1,6 @@
-﻿using ShopMonolitica.Web.Data.Core;
-
-namespace ShopMonolitica.Web.Data.Entities
+﻿namespace ShopMonolitica.Web.Data.Models
 {
-    public class Customers : BaseEntity
+    public class CustomersModel
     {
         public string companyname { get; set; }
         public string contactname { get; set; }
@@ -15,6 +13,5 @@ namespace ShopMonolitica.Web.Data.Entities
         public string country { get; set; }
         public string phone { get; set; }
         public string? fax { get; set; }
-     
     }
 }
