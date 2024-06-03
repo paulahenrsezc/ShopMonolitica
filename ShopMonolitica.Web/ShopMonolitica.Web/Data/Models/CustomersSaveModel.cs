@@ -1,8 +1,7 @@
 ﻿namespace ShopMonolitica.Web.Data.Models
 {
-    public class CustomersModel
+    public class CustomersSaveModel
     {
-        public int custid { get; set; }
         public string companyname { get; set; }
         public string contactname { get; set; }
         public string contacttitle { get; set; }

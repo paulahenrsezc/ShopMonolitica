@@ -1,22 +1,25 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ShopMonolitica.Web.Data.Context;
+using ShopMonolitica.Web.Data.interfaces;
 
 namespace ShopMonolitica.Web.Controllers
 {
     public class UsersController : Controller
     {
-        private readonly ShopContext _shopContext;
-        public UsersController(ShopContext shopContext)
+        private readonly IUsersDb _usersDb;
+
+        public UsersController(IUsersDb usersDb)
         {
-            _shopContext = shopContext;
+           
+           _usersDb = usersDb;
         }
 
         // GET: UsersController
         public ActionResult Index()
         {
-           
-            return View();
+           var users = _usersDb.GetUsers();
+            return View(users);
         }
 
         // GET: UsersController/Details/5

@@ -4,6 +4,7 @@ namespace ShopMonolitica.Web.Data.interfaces
 {
     public interface IEmployeesDb
     {
-        void Add(Employees employees);
+        void Save(Employees employees);
+        void UpdateDepartment(Employees employees);
     }
 }
