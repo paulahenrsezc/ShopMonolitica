@@ -55,8 +55,7 @@ namespace ShopMonolitica.Web.Data.DbObjects
             }).ToList();
         }
 
-
-        public void RemoveCustomers()
+        public void RemoveCustomer()
         {
             throw new NotImplementedException();
         }
