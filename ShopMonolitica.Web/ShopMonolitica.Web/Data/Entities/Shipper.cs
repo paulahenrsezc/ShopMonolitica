@@ -6,4 +6,4 @@ namespace ShopMonolitica.Web.Data.Entities
     {
         public int shipperid { get; set; }
     }
-}
+};

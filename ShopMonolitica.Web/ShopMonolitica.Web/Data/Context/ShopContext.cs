@@ -12,7 +12,7 @@ namespace ShopMonolitica.Web.Data.Context
 
         #region"Db Sets"
         public DbSet<Categories> Categories { get; set; }
-        public DbSet<Shipper> Shippers { get; set; }
+        public DbSet<Shippers> Shippers { get; set; }
         #endregion
     }
 

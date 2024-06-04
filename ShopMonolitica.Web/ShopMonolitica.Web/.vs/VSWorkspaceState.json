@@ -1,16 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BL",
-    "\\BL\\Dtos",
-    "\\BL\\Exceptions",
-    "\\BL\\Interfaces",
-    "\\BL\\Services",
-    "\\Controllers",
     "\\Data",
+    "\\Data\\Context",
     "\\Data\\Core",
-    "\\Data\\Entities"
+    "\\Data\\DbObjects",
+    "\\Data\\Entities",
+    "\\Data\\Extentions",
+    "\\Data\\interfaces",
+    "\\Data\\Models"
   ],
-  "SelectedNode": "\\Data\\Core\\BaseEntity.cs",
+  "SelectedNode": "\\Data\\Extentions\\ShipperExtentions.cs",
   "PreviewInSolutionExplorer": false
 }

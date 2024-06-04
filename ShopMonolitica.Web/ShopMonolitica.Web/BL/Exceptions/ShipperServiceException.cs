@@ -1,11 +1,14 @@
 ﻿namespace ShopMonolitica.Web.BL.Exceptions
 {
-    public class Shipper : Exception
+    public class Shippers : Exception
     {
-        public Shipper(string message) : base(message)
+        public Shippers(string message) : base(message)
         {
 
         }
+
+        public string phone { get; internal set; }
+        public string companyname { get; internal set; }
     }
 }
 
