@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ShopMonolitica.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e6ec6558a9086165a7de0a9403870374cfa8802")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70699f38d0fb4585401babb40c8c7957a5156a3e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ShopMonolitica.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ShopMonolitica.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
