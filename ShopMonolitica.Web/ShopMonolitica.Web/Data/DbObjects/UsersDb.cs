@@ -39,7 +39,7 @@ namespace ShopMonolitica.Web.Data.DbObjects
 
         public void RemoveUser()
         {
-            Users userDelete = _shopContext.Users.Find()
+            Users userDelete = _shopContext.Users.Find();
         }
 
         public void SaveUser(UsersSaveModel usersSave)
