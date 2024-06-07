@@ -1,6 +1,20 @@
-﻿namespace ShopMonolitica.Web.Data.Context
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
+using ShopMonolitica.Web.BL.Exceptions;
+
+namespace ShopMonolitica.Web.Data.Context
 {
-    public class ShopContext
+    public class ShopContext: DbContext
     {
+       public ShopContext(DbContextOptions<ShopContext> options): base(options)
+        {
+        }
+
+        #region"Db Sets"
+        public DbSet<Categories> Categories { get; set; }
+        public DbSet<Shippers> Shippers { get; set; }
+        #endregion
     }
+
+
 }

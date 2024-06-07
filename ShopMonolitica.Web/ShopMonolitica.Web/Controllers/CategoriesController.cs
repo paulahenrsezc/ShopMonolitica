@@ -1,14 +1,24 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ShopMonolitica.Web.Data.Context;
+using ShopMonolitica.Web.Data.interfaces;
 
 namespace ShopMonolitica.Web.Controllers
 {
     public class CategoriesController : Controller
     {
+    
+        private readonly ICategoriesDb categoriesDb;
+
+        public CategoriesController(ICategoriesDb categoriesDb)
+        {
+            this.categoriesDb = categoriesDb;
+        }
         // GET: CategorieController
         public ActionResult Index()
         {
-            return View();
+            var categories = this.categoriesDb.GetCategories();
+            return View(categories);
         }
 
         // GET: CategorieController/Details/5

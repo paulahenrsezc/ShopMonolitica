@@ -1,14 +1,23 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ShopMonolitica.Web.Data.Context;
+using ShopMonolitica.Web.Data.interfaces;
 
 namespace ShopMonolitica.Web.Controllers
 {
     public class ShipperController : Controller
     {
+        private readonly IShipperDb shipperDb;
+
+        public ShipperController(IShipperDb shipperDb )
+        {
+            this.shipperDb = shipperDb;
+        }
         // GET: ShipperController
         public ActionResult Index()
         {
-            return View();
+            var shipper = this.shipperDb.GetShippers();
+            return View(shipper);
         }
 
         // GET: ShipperController/Details/5
