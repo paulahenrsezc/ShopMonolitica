@@ -66,7 +66,7 @@ namespace ShopMonolitica.Web.Data.Extentions
         }
 
 
-        public static void UpdateFromModel(this Customers customers, CustomerUpdateModel model)
+        public static void UpdateFromModel(this Customers customers, CustomersUpdateModel model)
         {
             model.companyname = model.companyname;
             model.contactname = model.contactname;

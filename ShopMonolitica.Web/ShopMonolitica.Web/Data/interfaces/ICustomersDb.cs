@@ -6,7 +6,7 @@ namespace ShopMonolitica.Web.Data.interfaces
     public interface ICustomersDb
     {
         void SaveCustomers(CustomersSaveModel customers);
-        void UpdateCustomes(CustomerUpdateModel updateModel);
+        void UpdateCustomes(CustomersUpdateModel updateModel);
         void RemoveCustomer();
 
 

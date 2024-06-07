@@ -46,7 +46,7 @@ namespace ShopMonolitica.Web.Data.DbObjects
 
             if (userToUpdate != null)
             {
-                userToUpdate.UpdateFromModel(usersModel); 
+                userToUpdate.UpdateFromModel(usersModel); // Usar el método de extensión
                 _shopContext.Users.Update(userToUpdate);
                 _shopContext.SaveChanges();
             }

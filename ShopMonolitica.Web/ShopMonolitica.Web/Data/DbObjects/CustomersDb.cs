@@ -5,7 +5,7 @@ using ShopMonolitica.Web.Data.Extentions;
 using ShopMonolitica.Web.Data.interfaces;
 using ShopMonolitica.Web.Data.Models;
 using System.Runtime.Intrinsics.Arm;
-using ShopMonolitica.Web.Data.Extentions;
+
 namespace ShopMonolitica.Web.Data.DbObjects
 {
     public class CustomersDb : ICustomersDb
@@ -19,7 +19,7 @@ namespace ShopMonolitica.Web.Data.DbObjects
 
         public CustomersModel GetCustomers(int custid)
         {
-            var customers = _shopContext.Customers.Find(custid).ConvertCustEntityToCustomersModel();
+            var customers = _shopContext.Customers.Find(custid).ConvertCustEntityCustomersModel();
             return customers;
         }
         public List<CustomersModel> GetCustomers()
@@ -41,7 +41,7 @@ namespace ShopMonolitica.Web.Data.DbObjects
             _shopContext.SaveChanges(); ;
         }
 
-        public void UpdateCustomes(CustomerUpdateModel updateModel)
+        public void UpdateCustomes(CustomersUpdateModel updateModel)
         {
             Customers customersToUpdate = _shopContext.Customers.Find(updateModel.custid);
 
