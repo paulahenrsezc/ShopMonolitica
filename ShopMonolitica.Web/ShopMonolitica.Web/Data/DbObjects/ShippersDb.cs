@@ -1,22 +1,26 @@
-﻿using ShopMonolitica.Web.Data.Context;
-using ShopMonolitica.Web.Data.Extentions;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using ShopMonolitica.Web.Data.Context;
+using ShopMonolitica.Web.Data.Entities;
 using ShopMonolitica.Web.Data.interfaces;
 using ShopMonolitica.Web.Data.Models;
+using System.Runtime.Intrinsics.Arm;
+using ShopMonolitica.Web.Data.Extentions;
 
 namespace ShopMonolitica.Web.Data.DbObjects
 {
-    public class ShipperDb : IShipperDb
+    public class ShippersDb : IShipperDb
     {
         private readonly ShopContext _shopContext;
 
-        public ShipperDb(ShopContext shopContext)
+        public ShippersDb( ShopContext shopContext)
         {
-            this._shopContext = shopContext;
+            _shopContext = shopContext;
         }
-        public ShipperModel GetShipper(int shipperid)
+
+        public ShipperModel GetShippers(int shipperid)
         {
-            var shipper = _shopContext.Shippers.Find(shipperid).ConvertShipperEntityShipperModel();
-            return shipper;
+            var shippers = _shopContext.Shippers.Find(shipperid).ConvertShipEntityToShippersModel();
+            return shippers;
         }
 
         public List<ShipperModel> GetShippers()
@@ -34,4 +38,6 @@ namespace ShopMonolitica.Web.Data.DbObjects
             throw new NotImplementedException();
         }
     }
+
+
 }

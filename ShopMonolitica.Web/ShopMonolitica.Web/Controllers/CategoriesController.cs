@@ -8,16 +8,16 @@ namespace ShopMonolitica.Web.Controllers
     public class CategoriesController : Controller
     {
     
-        private readonly ICategoriesDb categoriesDb;
+        private readonly ICategoriesDb _categoriesDb;
 
         public CategoriesController(ICategoriesDb categoriesDb)
         {
-            this.categoriesDb = categoriesDb;
+            _categoriesDb = categoriesDb;
         }
         // GET: CategorieController
         public ActionResult Index()
         {
-            var categories = this.categoriesDb.GetCategories();
+            var categories = _categoriesDb.GetCategories();
             return View(categories);
         }
 

@@ -7,16 +7,16 @@ namespace ShopMonolitica.Web.Controllers
 {
     public class ShipperController : Controller
     {
-        private readonly IShipperDb shipperDb;
+        private readonly IShipperDb _shipperDb;
 
         public ShipperController(IShipperDb shipperDb )
         {
-            this.shipperDb = shipperDb;
+            _shipperDb = shipperDb;
         }
         // GET: ShipperController
         public ActionResult Index()
         {
-            var shipper = this.shipperDb.GetShippers();
+            var shipper = _shipperDb.GetShippers();
             return View(shipper);
         }
 

@@ -1,8 +1,12 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using ShopMonolitica.Web.Data.Context;
+using ShopMonolitica.Web.Data.Entities;
+using ShopMonolitica.Web.Data.Extensions;
 using ShopMonolitica.Web.Data.interfaces;
 using ShopMonolitica.Web.Data.Models;
-using ShopMonolitica.Web.Data.Entities;
-using ShopMonolitica.Web.BL.Exceptions;
+
 
 namespace ShopMonolitica.Web.Data.DbObjects
 {
@@ -14,58 +18,37 @@ namespace ShopMonolitica.Web.Data.DbObjects
         {
             _shopContext = shopContext;
         }
+
         public List<CategoriesModel> GetCategories()
         {
-            return _shopContext.Categories.Select(categories=> new CategoriesModel()
-            {
-                categoryname = categories.categoryname,
-                description = categories.description,
-                creation_date = categories.creation_date
-
-
-            }).ToList();
+            return _shopContext.Categories
+                .Select(category => category.ConvertCatEntityToCategoriesModel())
+                .ToList();
         }
 
         public CategoriesModel GetCategoriesModel(int categoryid)
         {
-            var shipper = _shopContext.Categories.Find(categoryid);
-
-            CategoriesModel categoriesModel = new CategoriesModel();
-            {
-                categoryname = categories.categoryname,
-                description = categories.description,
-                creation_date = categories.creation_date
-
-            };
-
+            var category = _shopContext.Categories.Find(categoryid);
+            return category?.ConvertCustEntityCustomersModel();
         }
 
-        public void Save(CategoriesSaveModel categories)
+        public void Save(CategoriesSaveModel categoriesSave)
         {
-            Categories categories = new Categories();
-            {
-                categoryname = categories.categoryname,
-                description = categories.description,
-                creation_date = categories.creation_date
-
-            };
-            _shopContext.Categories.Add(categories1);
+            Categories categoryEntity = categoriesSave.ConvertCatSaveModelToCategoriesEntity();
+            _shopContext.Categories.Add(categoryEntity);
             _shopContext.SaveChanges();
 
         }
-       
+
         public void Update(CategoriesUpdateModel updateModel)
         {
-            Categories categories1 = new Categories();
+            Categories categoriesToUpdate = _shopContext.Categories.Find(updateModel.categoryid);
+            if (categoriesToUpdate != null)
             {
-            categoryname = categories1.categoryname,
-            description = categories1.description,
-            creation_date = categories1.creation_date
-
-            };
-            _shopContext.Categories.Update(categories1);
-            _shopContext.SaveChanges();
+                categoriesToUpdate.UpdateFromModel(updateModel);
+                _shopContext.Categories.Update(categoriesToUpdate);
+                _shopContext.SaveChanges();
+            }
         }
     }
-
 }

@@ -8,6 +8,6 @@ namespace ShopMonolitica.Web.Data.interfaces
         void Update(ShipperUpdateModel updateModel);
 
         List<ShipperModel> GetShippers();
-        ShipperModel GetShipper(int shipperid);
+        ShipperModel GetShippers(int shipperid);
     }
 }

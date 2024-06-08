@@ -2,7 +2,7 @@
 {
     public class CategoriesSaveModel
     {
-        public string? companyname { get; set; }
-        public string? phone { get; set; }
+        public string? categoryname { get; set; }
+        public string? description { get; set; }
     }
 }
