@@ -34,8 +34,8 @@ namespace ShopMonolitica.Web.Data.DbObjects
 
         public void Save(CategoriesSaveModel categoriesSave)
         {
-            Categories categoryEntity = categoriesSave.ConvertCatSaveModelToCategoriesEntity();
-            _shopContext.Categories.Add(categoryEntity);
+            Categories categoriesEntity = categoriesSave.ConvertCatSaveModelToCategoriesEntity();
+            _shopContext.Categories.Add(categoriesEntity);
             _shopContext.SaveChanges();
 
         }
@@ -51,4 +51,4 @@ namespace ShopMonolitica.Web.Data.DbObjects
             }
         }
     }
-}
+};

@@ -1,10 +1,12 @@
-﻿
-namespace ShopMonolitica.Web.Data.Models
+﻿namespace ShopMonolitica.Web.Data.Models
 {
-    public class ShipperSaveModel
+    public class ShippersUpdateModel
     {
         public int shipperid { get; set; }
         public string? companyname { get; set; }
         public string? phone { get; set; }
+        public DateTime? modify_date { get; set; }
+
+
     }
 }

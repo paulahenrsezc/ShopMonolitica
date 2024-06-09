@@ -8,9 +8,9 @@ namespace ShopMonolitica.Web.Data.Extentions
 {
     public static class ShippersExtention
     {
-        public static ShipperModel ConvertShipEntityShippersModel(this ShipperModel shipper)
+        public static ShippersModel ConvertShipEntityShippersModel(this Shippers shipper)
         {
-            ShipperModel shipperModel = new ShipperModel()
+            ShippersModel shipperModel = new ShippersModel()
             {
                 companyname = shipper.companyname,
                 phone = shipper.phone
@@ -19,9 +19,9 @@ namespace ShopMonolitica.Web.Data.Extentions
         }
 
 
-        public static ShipperModel ConvertShipEntityToShippersModel(this ShipperModel shipper)
+        public static ShippersModel ConvertShipEntityToShippersModel(this Shippers shipper)
         {
-            return new ShipperModel
+            return new ShippersModel
             {
                 companyname = shipper.companyname,
                 phone = shipper.phone
@@ -29,16 +29,16 @@ namespace ShopMonolitica.Web.Data.Extentions
         }
 
 
-        public static ShipperModel ConvertShipSaveModelToShipperEntity(this ShipperModel shipperModel)
+        public static Shippers ConvertShipSaveModelToShipperEntity(this ShippersSaveModel shipperModel)
         {
-            return new ShipperModel
+            return new Shippers
             {
                 companyname = shipperModel.companyname,
                 phone = shipperModel.phone
             };
         }
 
-        public static void UpdateFromModel(this ShipperModel shipperModel, ShipperUpdateModel model)
+        public static void UpdateFromModel(this Shippers shipperModel, ShippersUpdateModel model)
         {
             model.shipperid = model.shipperid;
             model.companyname = model.companyname;

@@ -1,13 +1,16 @@
 ﻿using ShopMonolitica.Web.Data.Models;
 using ShopMonolitica.Web.Data.Entities;
+
 namespace ShopMonolitica.Web.Data.interfaces
 {
-    public interface IShipperDb
+    public interface IShippersDb
     {
-        void Save(ShipperSaveModel shipper);
-        void Update(ShipperUpdateModel updateModel);
+        void SaveShippers(ShippersSaveModel shippers);
+        void UpdateShippers(ShippersUpdateModel updateModel);
+        void RemoveShippers();
 
-        List<ShipperModel> GetShippers();
-        ShipperModel GetShippers(int shipperid);
+
+        List<ShippersModel> GetShippers();
+        ShippersModel GetShippers(int shipperid);
     }
 }

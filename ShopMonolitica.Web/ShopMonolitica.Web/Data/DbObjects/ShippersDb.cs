@@ -1,43 +1,59 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using ShopMonolitica.Web.Data.Context;
 using ShopMonolitica.Web.Data.Entities;
+using ShopMonolitica.Web.Data.Extensions;
+using ShopMonolitica.Web.Data.Extentions;
 using ShopMonolitica.Web.Data.interfaces;
 using ShopMonolitica.Web.Data.Models;
 using System.Runtime.Intrinsics.Arm;
-using ShopMonolitica.Web.Data.Extentions;
 
 namespace ShopMonolitica.Web.Data.DbObjects
 {
-    public class ShippersDb : IShipperDb
+
+
+    public class ShippersDb : IShippersDb
     {
         private readonly ShopContext _shopContext;
 
-        public ShippersDb( ShopContext shopContext)
+        public ShippersDb(ShopContext shopContext)
         {
             _shopContext = shopContext;
         }
 
-        public ShipperModel GetShippers(int shipperid)
+        public List<ShippersModel> GetShippers()
         {
-            var shippers = _shopContext.Shippers.Find(shipperid).ConvertShipEntityToShippersModel();
-            return shippers;
+           return _shopContext.Shippers
+                .Select(shippers => shippers
+                .ConvertShipEntityToShippersModel()).ToList();
+        }
+        
+        public ShippersModel GetShippers(int shipperid)
+        {
+            var shippers = _shopContext.Shippers.Find(shipperid);
+            return shippers?.ConvertShipEntityShippersModel();
         }
 
-        public List<ShipperModel> GetShippers()
+        public void RemoveShippers()
         {
             throw new NotImplementedException();
         }
 
-        public void Save(ShipperSaveModel shipper)
+        public void SaveShippers(ShippersSaveModel shippers)
         {
-            throw new NotImplementedException();
+            Shippers shippersEntity = shippers.ConvertShipSaveModelToShipperEntity();
+            _shopContext.Shippers.Add(shippersEntity);
+            _shopContext.SaveChanges();
         }
 
-        public void Update(ShipperUpdateModel updateModel)
+        public void UpdateShippers(ShippersUpdateModel updateModel)
         {
-            throw new NotImplementedException();
+            Shippers shippersToUpdate = _shopContext.Shippers.Find(updateModel.shipperid);
+            if (shippersToUpdate != null)
+            {
+                shippersToUpdate.UpdateFromModel(updateModel);
+                _shopContext.Shippers.Update(shippersToUpdate);
+                _shopContext.SaveChanges();
+            }
         }
     }
-
-
-}
+};

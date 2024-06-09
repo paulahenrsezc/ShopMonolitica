@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 using ShopMonolitica.Web.BL.Exceptions;
+using ShopMonolitica.Web.Data.Entities;
 
 namespace ShopMonolitica.Web.Data.Context
 {
