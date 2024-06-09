@@ -1,6 +1,6 @@
 ﻿namespace ShopMonolitica.Web.Data.Models
 {
-    public class UsersUpdateModel
+    public class UsersUpdateModel : UsersModel
     {
         public int UserId { get; set; }
         public string Email { get; set; }
