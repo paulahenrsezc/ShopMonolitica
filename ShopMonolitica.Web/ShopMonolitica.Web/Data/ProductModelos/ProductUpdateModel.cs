@@ -1,6 +1,10 @@
-﻿namespace ShopMonolitica.Web.Data.ProductModel
+﻿using ShopMonolitica.Web.Data.Models;
+
+namespace ShopMonolitica.Web.Data.ProductModel
 {
-    public class ProductUpdateModel
+    public class ProductUpdateModel : ProductsModel
     {
+
     }
+
 }

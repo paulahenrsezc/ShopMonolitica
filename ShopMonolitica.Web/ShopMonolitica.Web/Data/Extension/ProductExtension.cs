@@ -17,16 +17,28 @@ namespace ShopMonolitica.Web.Data.Extension
                 supplierid = products.supplierid,
             };
         }  
-        public static ProductSaveModel ConvertProductSaveModel(this ProductSaveModel productsave)
+        public static Products ConvertProductSaveModel(this ProductSaveModel productsave)
         {
-            return new ProductSaveModel()
+            return new Products()
             {
-                productid = productsave.productid,
                 productname = productsave.productname,
                 unitprice = productsave.unitprice,
                 discontinued = productsave.discontinued,
                 categoryid = productsave.categoryid,
                 supplierid = productsave.supplierid,
+            };
+        }
+
+        public static void UpdateFrom(this ProductUpdateModel productupdate)
+        {
+            new Products()
+                
+            {
+                productname = productupdate.productname,
+                unitprice = productupdate.unitprice,
+                discontinued = productupdate.discontinued,
+                categoryid = productupdate.categoryid,
+                supplierid = productupdate.supplierid,
             };
         }
     }
