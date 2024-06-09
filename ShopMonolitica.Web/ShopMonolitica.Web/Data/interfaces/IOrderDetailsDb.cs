@@ -1,6 +1,5 @@
 ﻿using ShopMonolitica.Web.Data.Entities;
 using ShopMonolitica.Web.Data.Models;
-using ShopMonolitica.Web.Data.Models.Employees;
 using ShopMonolitica.Web.Data.Models.OrderDetails;
 
 namespace ShopMonolitica.Web.Data.interfaces
@@ -9,8 +8,8 @@ namespace ShopMonolitica.Web.Data.interfaces
     {
         void SaveOrderDetails(OrderDetailsSaveModel orderdetailsSave);
         void UpdateOrderDetails(OrderDetailsUpdateModel updateModel);
-        void RemoveEmployees(OrderDetailsRemoveModel orderdetailsRemove);
+        void RemoveOrderDetails(OrderDetailsRemoveModel orderdetailsRemove);
         List<OrderDetailsModel> GetOrderDetails();
-        OrderDetailsModel GetOrderDetails(int idEmployees);
+        OrderDetailsModel GetOrderDetails(int idOrderDetails);
     }
 }
