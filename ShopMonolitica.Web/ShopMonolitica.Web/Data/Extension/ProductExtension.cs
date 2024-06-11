@@ -29,10 +29,9 @@ namespace ShopMonolitica.Web.Data.Extension
             };
         }
 
-        public static void UpdateFrom(this ProductUpdateModel productupdate)
+        public static ProductsModel ConvertProductUpdateModel(this Products productupdate)
         {
-            new Products()
-                
+           return new ProductsModel   
             {
                 productname = productupdate.productname,
                 unitprice = productupdate.unitprice,

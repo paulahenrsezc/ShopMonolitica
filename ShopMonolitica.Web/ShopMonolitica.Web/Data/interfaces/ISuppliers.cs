@@ -1,14 +1,16 @@
 ﻿using ShopMonolitica.Web.Data.Entities;
+using ShopMonolitica.Web.Data.Models;
+using ShopMonolitica.Web.Data.SupplierModelos;
 
 namespace ShopMonolitica.Web.Data.interfaces
 {
     public interface ISuppliers
     {
-        void SaveSuppliers(Suppliers suppliers);
-        void UpdatesSuppliers(Suppliers suppliers);
-        void RemoveSuppliers(Suppliers suppliers);
-        Suppliers GetSuppliers(int id);
-        List<Suppliers> GetSuppliers(Func<Suppliers, bool> filter);
-        bool ExitSuppliers(Func<Suppliers, bool> filter);
+        void SaveSuppliers(SupplierSaveModel suppliersave);
+        void UpdatesSuppliers(SupplierUpdateModel suppliers);
+        void RemoveSuppliers(SupplierRemoveModel suppliers);
+        SuppliersModel GetSuppliers(int SupplierId);
+        List<SuppliersModel> GetSuppliers();
+        
     }
 }

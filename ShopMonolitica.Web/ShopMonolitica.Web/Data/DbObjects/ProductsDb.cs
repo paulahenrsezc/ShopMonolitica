@@ -61,7 +61,7 @@ namespace ShopMonolitica.Web.Data.DbObjects
 
             if (productsToUpdate != null)
             
-                productsToUpdate.ConvertProductEntitieModel();
+                productsToUpdate.ConvertProductUpdateModel();
                 _context.Products.Update(productsToUpdate);
                 _context.SaveChanges();
             
