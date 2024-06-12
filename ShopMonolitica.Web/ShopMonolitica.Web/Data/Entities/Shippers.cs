@@ -2,7 +2,7 @@
 
 namespace ShopMonolitica.Web.Data.Entities
 {
-    public class Shippers : BaseEntity
+    public class Shippers
     {
         public int shipperid { get; set; }
         public string? companyname { get; set; }
