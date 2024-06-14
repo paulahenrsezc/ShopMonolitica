@@ -2,7 +2,7 @@
 
 namespace ShopMonolitica.Web.Data.Entities
 {
-    public class OrderDetails:BaseEntity
+    public class OrderDetails
     {
         public int? orderid { get; set; }
         public int? productid { get; set; }

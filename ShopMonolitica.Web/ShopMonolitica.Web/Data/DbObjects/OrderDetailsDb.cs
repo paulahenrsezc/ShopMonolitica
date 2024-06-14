@@ -43,14 +43,8 @@ namespace ShopMonolitica.Web.Data.DbObjects
 
         public void UpdateOrderDetails(OrderDetailsUpdateModel updateModel)
         {
-            OrderDetails orderdetailsToUpdate = _shopcontext.OrderDetails.Find(updateModel.orderid);
-
-            if (orderdetailsToUpdate != null)
-            {
-                orderdetailsToUpdate.UpdateFromModel(updateModel);
-                _shopcontext.OrderDetails.Update(orderdetailsToUpdate);
-                _shopcontext.SaveChanges();
-            }
+            throw new NotImplementedException();
         }
+
     }
 }

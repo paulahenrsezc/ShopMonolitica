@@ -43,14 +43,7 @@ namespace ShopMonolitica.Web.Data.DbObjects
 
         public void UpdateEmployees(EmployeesUpdateModel updateModel)
         {
-            Employees employeesToUpdate = _shopcontext.Employees.Find(updateModel.empid);
-
-            if(employeesToUpdate != null)
-            {
-                employeesToUpdate.UpdateFromModel(updateModel);
-                _shopcontext.Employees.Update(employeesToUpdate);
-                _shopcontext.SaveChanges();
-            }
+            throw new NotImplementedException();
         }
 
     }

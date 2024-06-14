@@ -70,8 +70,6 @@ namespace ShopMonolitica.Web.Data.Extentions
 
         public static void UpdateFromModel(this Employees employees, EmployeesUpdateModel updateModel)
         {
-            employees.modify_date = employees.modify_date;
-            employees.modify_user = employees.modify_user;
             employees.address = employees.address;
             employees.birthdate = employees.birthdate;
             employees.city = employees.city;

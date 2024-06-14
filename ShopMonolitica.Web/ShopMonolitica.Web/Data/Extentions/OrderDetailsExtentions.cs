@@ -40,8 +40,6 @@ namespace ShopMonolitica.Web.Data.Extentions
 
         public static void UpdateFromModel(this OrderDetails orderdetails, OrderDetailsUpdateModel updateModel)
         {
-            orderdetails.modify_date = orderdetails.modify_date;
-            orderdetails.modify_user = orderdetails.modify_user;
             orderdetails.unitPrice = orderdetails.unitPrice;
             orderdetails.qty = orderdetails.qty;
             orderdetails.discount = orderdetails.discount;
