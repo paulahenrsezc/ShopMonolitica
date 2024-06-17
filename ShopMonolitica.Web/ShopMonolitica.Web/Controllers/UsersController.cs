@@ -18,7 +18,7 @@ namespace ShopMonolitica.Web.Controllers
         // GET: UsersController
         public ActionResult Index()
         {
-           var users = _usersDb.GetUsers();
+            var users = _usersDb.GetUsers();
             return View(users);
         }
 

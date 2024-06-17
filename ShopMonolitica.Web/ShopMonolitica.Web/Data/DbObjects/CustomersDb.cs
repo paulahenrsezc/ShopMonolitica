@@ -1,6 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using ShopMonolitica.Web.Data.Context;
 using ShopMonolitica.Web.Data.Entities;
+using ShopMonolitica.Web.Data.Exceptions;
 using ShopMonolitica.Web.Data.Extentions;
 using ShopMonolitica.Web.Data.interfaces;
 using ShopMonolitica.Web.Data.Models;
@@ -22,16 +24,12 @@ namespace ShopMonolitica.Web.Data.DbObjects
             var customers = _shopContext.Customers.Find(custid).ConvertCustEntityCustomersModel();
             return customers;
         }
+
         public List<CustomersModel> GetCustomers()
         {
             return _shopContext.Customers
-                .Select(customers => customers.ConvertCustEntityToCustomersModel())
-                .ToList();
-        }
-
-        public void RemoveCustomer()
-        {
-            throw new NotImplementedException();
+               .Select(customers => customers.ConvertCustEntityToCustomersModel())
+               .ToList();
         }
 
         public void SaveCustomers(CustomersSaveModel customersSave)
@@ -41,16 +39,25 @@ namespace ShopMonolitica.Web.Data.DbObjects
             _shopContext.SaveChanges(); ;
         }
 
-        public void UpdateCustomes(CustomersUpdateModel updateModel)
+        public void UpdateCustomers(CustomersUpdateModel updateModel)
         {
             Customers customersToUpdate = _shopContext.Customers.Find(updateModel.custid);
 
             if (customersToUpdate != null)
             {
-                customersToUpdate.UpdateFromModel(updateModel);
+                customersToUpdate.UpdateFromModels(updateModel);
                 _shopContext.Customers.Update(customersToUpdate);
                 _shopContext.SaveChanges();
             }
+        }
+
+        public void RemoveCustomers(CustomersRemoveModel removeModel)
+        {
+            Customers customers= _shopContext.Customers.Find(removeModel.custid);
+         
+            var customer = _shopContext.ValidateCustomerExists(removeModel.custid);
+            _shopContext.Customers.Remove(customer);
+            _shopContext.SaveChanges();       
         }
     }
 }

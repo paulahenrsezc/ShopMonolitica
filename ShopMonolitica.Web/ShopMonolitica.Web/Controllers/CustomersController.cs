@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ShopMonolitica.Web.Data.Context;
 using ShopMonolitica.Web.Data.interfaces;
+using ShopMonolitica.Web.Data.Models;
 
 namespace ShopMonolitica.Web.Controllers
 {
@@ -18,13 +19,14 @@ namespace ShopMonolitica.Web.Controllers
         public ActionResult Index()
         {
             var customers = _customersDb.GetCustomers();
-            return View();
+            return View(customers);
         }
 
         // GET: CustomersController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var customers = _customersDb.GetCustomers(id);
+            return View(customers);
         }
 
         // GET: CustomersController/Create
@@ -36,10 +38,11 @@ namespace ShopMonolitica.Web.Controllers
         // POST: CustomersController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(CustomersSaveModel customersSave)
         {
             try
             {
+                _customersDb.SaveCustomers(customersSave);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -51,16 +54,19 @@ namespace ShopMonolitica.Web.Controllers
         // GET: CustomersController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var customers = _customersDb.GetCustomers(id);
+            return View(customers);
         }
 
         // POST: CustomersController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(CustomersUpdateModel customersUpdate)
         {
             try
             {
+
+                _customersDb.UpdateCustomers(customersUpdate);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -70,24 +76,24 @@ namespace ShopMonolitica.Web.Controllers
         }
 
         // GET: CustomersController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
+        //public ActionResult Delete(int id)
+        //{
+        //    return View();
+        //}
 
         // POST: CustomersController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Delete(int id, IFormCollection collection)
+        //{
+        //    try
+        //    {
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    catch
+        //    {
+        //        return View();
+        //    }
+        //}
     }
 }

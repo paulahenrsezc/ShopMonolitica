@@ -17,7 +17,7 @@ namespace ShopMonolitica.Web.Data.DbObjects
 
         public UsersModel GetUsers(int UserId)
         {
-            var user = _shopContext.Users.Find(UserId).ConvertUsersEntityToUsersModel();
+            var user = _shopContext.Users.Find(UserId).ConvertUsersEntityUsersModel();
             return user;
         }
 

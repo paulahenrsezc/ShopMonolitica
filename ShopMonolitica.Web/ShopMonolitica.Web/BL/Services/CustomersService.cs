@@ -16,5 +16,25 @@ namespace ShopMonolitica.Web.BL.Services
         {
             throw new NotImplementedException();
         }
+
+        public void GetCustomers(int custid)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveCustomers(CustomersRemoveModel removeModel)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveCustomers(CustomersSaveModel customers)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateCustomers(CustomersUpdateModel updateModel)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

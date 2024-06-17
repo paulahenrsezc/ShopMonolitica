@@ -9,7 +9,6 @@ namespace ShopMonolitica.Web.Data.interfaces
         void UpdateUser(UsersUpdateModel usersModel);
 
         void RemoveUser();
-
         List<UsersModel> GetUsers();
         UsersModel GetUsers(int UserId);
     }

@@ -1,5 +1,7 @@
-﻿using ShopMonolitica.Web.Data.DbObjects;
+﻿using ShopMonolitica.Web.Data.Context;
+using ShopMonolitica.Web.Data.DbObjects;
 using ShopMonolitica.Web.Data.Entities;
+using ShopMonolitica.Web.Data.Exceptions;
 using ShopMonolitica.Web.Data.Models;
 
 namespace ShopMonolitica.Web.Data.Extentions
@@ -10,8 +12,9 @@ namespace ShopMonolitica.Web.Data.Extentions
 
         public static CustomersModel ConvertCustEntityCustomersModel(this Customers customers)
         {
-            CustomersModel customersModel = new CustomersModel()
+            CustomersModel customersmodel = new CustomersModel()
             {
+                custid = customers.custid,
                 companyname = customers.companyname,
                 contactname = customers.contactname,
                 contacttitle = customers.contacttitle,
@@ -24,7 +27,7 @@ namespace ShopMonolitica.Web.Data.Extentions
                 phone = customers.phone,
                 fax = customers.fax
             };
-            return customersModel;
+            return customersmodel;
 
         }
 
@@ -32,6 +35,7 @@ namespace ShopMonolitica.Web.Data.Extentions
         {
             return new CustomersModel
             {
+                custid = customers.custid,
                 companyname = customers.companyname,
                 contactname = customers.contactname,
                 contacttitle = customers.contacttitle,
@@ -47,10 +51,26 @@ namespace ShopMonolitica.Web.Data.Extentions
         }
 
 
+        public static void UpdateFromModels(this Customers customers, CustomersUpdateModel model)
+        {
+          
+            model.companyname = model.companyname;
+            model.contactname = model.contactname;
+            model.contacttitle = model.contacttitle;
+            model.address = model.address;
+            model.email = model.email;
+            model.city = model.city;
+            model.region = model.region;
+            model.postalcode = model.postalcode;
+            model.country = model.country;
+            model.phone = model.phone;
+            model.fax = model.fax;
+        }
         public static Customers ConvertCustomersSaveModelToCustomersEntity(this CustomersSaveModel customersSave)
         {
             return new Customers
             {
+                custid = customersSave.custid,
                 companyname = customersSave.companyname,
                 contactname = customersSave.contactname,
                 contacttitle = customersSave.contacttitle,
@@ -65,20 +85,14 @@ namespace ShopMonolitica.Web.Data.Extentions
             };
         }
 
-
-        public static void UpdateFromModel(this Customers customers, CustomersUpdateModel model)
+        public static Customers ValidateCustomerExists(this ShopContext context, int custid)
         {
-            model.companyname = model.companyname;
-            model.contactname = model.contactname;
-            model.contacttitle = model.contacttitle;
-            model.address = model.address;
-            model.email = model.email;
-            model.city = model.city;
-            model.region = model.region;
-            model.postalcode = model.postalcode;
-            model.country = model.country;
-            model.phone = model.phone;
-            model.fax = model.companyname;
+            var customer = context.Customers.Find(custid);
+            if (customer == null)
+            {
+                throw new CustomersDbException("El cliente no está registrado");
+            }
+            return customer;
         }
 
 

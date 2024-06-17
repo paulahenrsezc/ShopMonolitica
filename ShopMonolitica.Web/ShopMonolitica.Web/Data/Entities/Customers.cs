@@ -1,9 +1,12 @@
-﻿using ShopMonolitica.Web.Data.Core;
+﻿using Microsoft.EntityFrameworkCore;
+using ShopMonolitica.Web.Data.Core;
+using System.ComponentModel.DataAnnotations;
 
 namespace ShopMonolitica.Web.Data.Entities
 {
-    public class Customers : BaseEntity
+    public class Customers 
     {
+        [Key]
         public int custid { get; set; }
         public string companyname { get; set; }
         public string contactname { get; set; }
@@ -16,6 +19,6 @@ namespace ShopMonolitica.Web.Data.Entities
         public string country { get; set; }
         public string phone { get; set; }
         public string? fax { get; set; }
-     
+
     }
 }

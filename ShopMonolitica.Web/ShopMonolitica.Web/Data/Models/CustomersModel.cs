@@ -1,7 +1,11 @@
-﻿namespace ShopMonolitica.Web.Data.Models
+﻿using ShopMonolitica.Web.Data.interfaces;
+using System.ComponentModel.DataAnnotations;
+
+namespace ShopMonolitica.Web.Data.Models
 {
-    public class CustomersModel
+    public class CustomersModel 
     {
+        [Key]
         public int custid { get; set; }
         public string companyname { get; set; }
         public string contactname { get; set; }
