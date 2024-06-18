@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ShopMonolitica.Web.Data.Context;
+using ShopMonolitica.Web.Data.DbObjects;
 using ShopMonolitica.Web.Data.interfaces;
+using ShopMonolitica.Web.Data.Models;
 
 namespace ShopMonolitica.Web.Controllers
 {
@@ -25,7 +27,8 @@ namespace ShopMonolitica.Web.Controllers
         // GET: UsersController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var users = _usersDb.GetUsers(id);
+            return View(users);
         }
 
         // GET: UsersController/Create
@@ -37,10 +40,11 @@ namespace ShopMonolitica.Web.Controllers
         // POST: UsersController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(UsersSaveModel usersSave)
         {
             try
             {
+                _usersDb.SaveUser(usersSave);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -52,16 +56,18 @@ namespace ShopMonolitica.Web.Controllers
         // GET: UsersController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var users = _usersDb.GetUsers(id);
+            return View(users);
         }
 
         // POST: UsersController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(UsersUpdateModel usersSave)
         {
             try
             {
+                _usersDb.UpdateUser(usersSave);
                 return RedirectToAction(nameof(Index));
             }
             catch

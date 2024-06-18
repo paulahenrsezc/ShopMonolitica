@@ -1,8 +1,9 @@
-﻿using ShopMonolitica.Web.Data.Core;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ShopMonolitica.Web.Data.Entities
 {
+    [Table("Users", Schema = "Security")]
     public class Users 
     {
         [Key]

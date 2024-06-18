@@ -20,7 +20,11 @@ namespace ShopMonolitica.Web.Data.Context
         {
             modelBuilder.Entity<Customers>()
                 .ToTable("Customers", "Sales");
+            modelBuilder.Entity<Users>()
+                .ToTable("Users", "Security");
+
         }
+
     }
 
 }

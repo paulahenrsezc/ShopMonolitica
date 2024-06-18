@@ -24,7 +24,7 @@ namespace ShopMonolitica.Web.Data.DbObjects
         public List<UsersModel> GetUsers()
         {
             return _shopContext.Users
-                .Select(user => user.ConvertUsersEntityToUsersModel())
+                .Select(user => user.ConvertUsersEntityUsersModel())
                 .ToList();
         }
 
@@ -46,7 +46,7 @@ namespace ShopMonolitica.Web.Data.DbObjects
 
             if (userToUpdate != null)
             {
-                userToUpdate.UpdateFromModel(usersModel); // Usar el método de extensión
+                userToUpdate.UpdateFromModel(usersModel); 
                 _shopContext.Users.Update(userToUpdate);
                 _shopContext.SaveChanges();
             }

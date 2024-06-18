@@ -11,6 +11,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<ShopContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ShopContext")));
 builder.Services.AddScoped<ICustomersDb, CustomersDb>();
+builder.Services.AddScoped<IUsersDb, UsersDb>();
 builder.Services.AddControllersWithViews();
 var app = builder.Build();
 

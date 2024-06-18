@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using ShopMonolitica.Web.Data.Context;
+﻿using Microsoft.AspNetCore.Mvc;
 using ShopMonolitica.Web.Data.interfaces;
 using ShopMonolitica.Web.Data.Models;
 
@@ -65,7 +63,6 @@ namespace ShopMonolitica.Web.Controllers
         {
             try
             {
-
                 _customersDb.UpdateCustomers(customersUpdate);
                 return RedirectToAction(nameof(Index));
             }
@@ -75,13 +72,13 @@ namespace ShopMonolitica.Web.Controllers
             }
         }
 
-        // GET: CustomersController/Delete/5
+        ////GET: CustomersController/Delete/5
         //public ActionResult Delete(int id)
         //{
         //    return View();
         //}
 
-        // POST: CustomersController/Delete/5
+        ////POST: CustomersController/Delete/5
         //[HttpPost]
         //[ValidateAntiForgeryToken]
         //public ActionResult Delete(int id, IFormCollection collection)

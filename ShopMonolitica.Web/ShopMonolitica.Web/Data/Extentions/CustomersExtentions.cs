@@ -53,7 +53,7 @@ namespace ShopMonolitica.Web.Data.Extentions
 
         public static void UpdateFromModels(this Customers customers, CustomersUpdateModel model)
         {
-          
+            model.custid = model.custid;
             model.companyname = model.companyname;
             model.contactname = model.contactname;
             model.contacttitle = model.contacttitle;
