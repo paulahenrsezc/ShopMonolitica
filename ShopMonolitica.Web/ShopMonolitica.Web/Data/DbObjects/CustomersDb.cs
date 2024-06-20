@@ -36,17 +36,17 @@ namespace ShopMonolitica.Web.Data.DbObjects
         {
             Customers customerEntity = customersSave.ConvertCustomersSaveModelToCustomersEntity();
             _shopContext.Customers.Add(customerEntity);
-            _shopContext.SaveChanges(); ;
+            _shopContext.SaveChanges(); 
         }
 
         public void UpdateCustomers(CustomersUpdateModel updateModel)
         {
-            Customers customersToUpdate = _shopContext.Customers.Find(updateModel.custid);
+            var updatedCustomer = _shopContext.Customers.FirstOrDefault(c => c.custid == updateModel.custid);
 
-            if (customersToUpdate != null)
+            if (updatedCustomer != null)
             {
-                customersToUpdate.UpdateFromModels(updateModel);
-                _shopContext.Customers.Update(customersToUpdate);
+                updatedCustomer.UpdateFromModels(updateModel);
+                _shopContext.Customers.Update(updatedCustomer);
                 _shopContext.SaveChanges();
             }
         }

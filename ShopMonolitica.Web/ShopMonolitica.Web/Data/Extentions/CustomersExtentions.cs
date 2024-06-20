@@ -12,8 +12,14 @@ namespace ShopMonolitica.Web.Data.Extentions
 
         public static CustomersModel ConvertCustEntityCustomersModel(this Customers customers)
         {
+
+            if (customers == null)
+            {
+                throw new ArgumentNullException(nameof(customers), "El parámetro 'customers' no puede ser nulo.");
+            }
             CustomersModel customersmodel = new CustomersModel()
             {
+
                 custid = customers.custid,
                 companyname = customers.companyname,
                 contactname = customers.contactname,
@@ -53,18 +59,18 @@ namespace ShopMonolitica.Web.Data.Extentions
 
         public static void UpdateFromModels(this Customers customers, CustomersUpdateModel model)
         {
-            model.custid = model.custid;
-            model.companyname = model.companyname;
-            model.contactname = model.contactname;
-            model.contacttitle = model.contacttitle;
-            model.address = model.address;
-            model.email = model.email;
-            model.city = model.city;
-            model.region = model.region;
-            model.postalcode = model.postalcode;
-            model.country = model.country;
-            model.phone = model.phone;
-            model.fax = model.fax;
+            customers.custid = model.custid;
+            customers.companyname = model.companyname;
+            customers.contactname = model.contactname;
+            customers.contacttitle = model.contacttitle;
+            customers.address = model.address;
+            customers.email = model.email;
+            customers.city = model.city;
+            customers.region = model.region;
+            customers.postalcode = model.postalcode;
+            customers.country = model.country;
+            customers.phone = model.phone;
+            customers.fax = model.fax;
         }
         public static Customers ConvertCustomersSaveModelToCustomersEntity(this CustomersSaveModel customersSave)
         {
@@ -82,6 +88,7 @@ namespace ShopMonolitica.Web.Data.Extentions
                 country = customersSave.country,
                 phone = customersSave.phone,
                 fax = customersSave.fax
+
             };
         }
 

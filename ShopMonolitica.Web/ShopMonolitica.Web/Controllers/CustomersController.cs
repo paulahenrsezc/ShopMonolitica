@@ -17,6 +17,7 @@ namespace ShopMonolitica.Web.Controllers
         public ActionResult Index()
         {
             var customers = _customersDb.GetCustomers();
+            customers = customers.OrderByDescending(c => c.custid).ToList();
             return View(customers);
         }
 
@@ -49,20 +50,24 @@ namespace ShopMonolitica.Web.Controllers
             }
         }
 
-        // GET: CustomersController/Edit/5
+        //GET: CustomersController/Edit/5
         public ActionResult Edit(int id)
         {
             var customers = _customersDb.GetCustomers(id);
             return View(customers);
         }
 
-        // POST: CustomersController/Edit/5
+        //POST: CustomersController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(CustomersUpdateModel customersUpdate)
         {
             try
             {
+                if (!ModelState.IsValid)
+                {
+                    return View(customersUpdate);
+                }
                 _customersDb.UpdateCustomers(customersUpdate);
                 return RedirectToAction(nameof(Index));
             }

@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ShopMonolitica.Web.Data.Entities
 {
     [Table("Customers", Schema = "Sales")]
-    public class Customers 
+    public class Customers
     {
         [Key]
         public int custid { get; set; }
