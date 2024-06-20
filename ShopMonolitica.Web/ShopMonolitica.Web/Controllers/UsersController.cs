@@ -21,6 +21,7 @@ namespace ShopMonolitica.Web.Controllers
         public ActionResult Index()
         {
             var users = _usersDb.GetUsers();
+            users = users.OrderByDescending(c => c.UserId).ToList();
             return View(users);
         }
 
