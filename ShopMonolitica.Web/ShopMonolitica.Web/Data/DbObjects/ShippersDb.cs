@@ -32,28 +32,5 @@ namespace ShopMonolitica.Web.Data.DbObjects
             var shippers = _shopContext.Shippers.Find(shipperid);
             return shippers?.ConvertShipEntityShippersModel();
         }
-
-        public void RemoveShippers()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SaveShippers(ShippersSaveModel shippers)
-        {
-            Shippers shippersEntity = shippers.ConvertShipSaveModelToShipperEntity();
-            _shopContext.Shippers.Add(shippersEntity);
-            _shopContext.SaveChanges();
-        }
-
-        public void UpdateShippers(ShippersUpdateModel updateModel)
-        {
-            Shippers shippersToUpdate = _shopContext.Shippers.Find(updateModel.shipperid);
-            if (shippersToUpdate != null)
-            {
-                shippersToUpdate.UpdateFromModel(updateModel);
-                _shopContext.Shippers.Update(shippersToUpdate);
-                _shopContext.SaveChanges();
-            }
-        }
     }
 };

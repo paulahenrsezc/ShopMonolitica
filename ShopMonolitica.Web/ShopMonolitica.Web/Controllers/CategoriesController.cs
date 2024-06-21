@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ShopMonolitica.Web.Data.Context;
 using ShopMonolitica.Web.Data.interfaces;
 
 namespace ShopMonolitica.Web.Controllers
@@ -8,8 +7,6 @@ namespace ShopMonolitica.Web.Controllers
     public class CategoriesController : Controller
     {
     
-        private readonly ICategoriesDb _categoriesDb;
-
         public CategoriesController(ICategoriesDb categoriesDb)
         {
             _categoriesDb = categoriesDb;
@@ -59,15 +56,6 @@ namespace ShopMonolitica.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
 
         // GET: CategorieController/Delete/5
         public ActionResult Delete(int id)
@@ -75,11 +63,6 @@ namespace ShopMonolitica.Web.Controllers
             return View();
         }
 
-        // POST: CategorieController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
             try
             {
                 return RedirectToAction(nameof(Index));

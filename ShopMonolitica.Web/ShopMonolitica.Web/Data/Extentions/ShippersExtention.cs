@@ -29,23 +29,6 @@ namespace ShopMonolitica.Web.Data.Extentions
         }
 
 
-        public static Shippers ConvertShipSaveModelToShipperEntity(this ShippersSaveModel shipperModel)
-        {
-            return new Shippers
-            {
-                companyname = shipperModel.companyname,
-                phone = shipperModel.phone
-            };
-        }
-
-        public static void UpdateFromModel(this Shippers shipperModel, ShippersUpdateModel model)
-        {
-            model.shipperid = model.shipperid;
-            model.companyname = model.companyname;
-            model.phone = model.phone;
-            model.modify_date = model.modify_date;
-        }
-
 
     }
 
