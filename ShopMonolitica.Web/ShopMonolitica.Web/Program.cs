@@ -1,8 +1,18 @@
+using Microsoft.EntityFrameworkCore;
+using ShopMonolitica.Web.Data.Context;
+using ShopMonolitica.Web.Data.DbObjects;
+using ShopMonolitica.Web.Data.interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddDbContext<ShopContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ShopContext")));
+builder.Services.AddScoped<IOrdersDb, OrdersDb>();
+builder.Services.AddScoped<ITestsDb, TestsDb>();
+builder.Services.AddScoped<IScoresDb, ScoresDb>();
+builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

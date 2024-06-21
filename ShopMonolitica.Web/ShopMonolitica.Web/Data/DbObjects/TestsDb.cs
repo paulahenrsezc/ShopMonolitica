@@ -1,8 +1,11 @@
-﻿using ShopMonolitica.Web.Data.Context;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+using ShopMonolitica.Web.Data.Context;
 using ShopMonolitica.Web.Data.Entities;
 using ShopMonolitica.Web.Data.Extentions;
 using ShopMonolitica.Web.Data.interfaces;
 using ShopMonolitica.Web.Data.Models.Test;
+using System.Data;
 
 namespace ShopMonolitica.Web.Data.DbObjects
 {
@@ -13,21 +16,19 @@ namespace ShopMonolitica.Web.Data.DbObjects
         {
             _shopcontext = context;
         }
-        public TestsModel GetTest(int testid)
+        public TestsGetModel GetTestsModel(int testid)
         {
-            var tests = _shopcontext.Tests.Find(testid).ConvertTestEntityTestModel();
+            var sqlQuery = $"SELECT * FROM Stats.Tests WHERE testid = @testid";
+            var parameters = new[] { new SqlParameter("@testid", SqlDbType.VarChar) { Value = testid.ToString() } };
+            var tests = _shopcontext.Tests.FromSqlRaw(sqlQuery, parameters).FirstOrDefault().ConvertTestEntityTestModel();
             return tests;
         }
 
-        public List<TestsModel> GetTests()
+        public List<TestsGetModel> GetTests()
         {
-            return _shopcontext.Tests.Select(tests => tests.ConvertTestEntityToTestModel())
-            .ToList();
-        }
-
-        public void RemoveTests()
-        {
-            throw new NotImplementedException();
+            return _shopcontext.Tests
+                .Select(tests => tests.ConvertTestEntityToTestModel())
+                .ToList();
         }
 
         public void SaveTests(TestsSaveModel testsSave)

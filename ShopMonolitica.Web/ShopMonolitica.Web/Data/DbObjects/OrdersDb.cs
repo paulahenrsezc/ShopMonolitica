@@ -14,21 +14,17 @@ namespace ShopMonolitica.Web.Data.DbObjects
         {
             _shopcontext = context;
         }
-        public OrdersModel GetOrder(int orderid)
+        public OrdersGetModel GetOrdersModel(int orderid)
         {
             var orders = _shopcontext.Orders.Find(orderid).ConvertOrdEntityOrdersModel();
             return orders;
         }
 
-        public List<OrdersModel> GetOrders()
+        public List<OrdersGetModel> GetOrders()
         {
-            return _shopcontext.Orders.Select(orders => orders.ConvertOrdEntityToOrdersModel())
-            .ToList();
-        }
-
-        public void RemoveOrders()
-        {
-            throw new NotImplementedException();
+            return _shopcontext.Orders
+                .Select(orders => orders.ConvertOrdEntityToOrdersModel())
+                .ToList();
         }
 
         public void SaveOrders(OrdersSaveModel ordersSave)
@@ -38,13 +34,13 @@ namespace ShopMonolitica.Web.Data.DbObjects
             _shopcontext.SaveChanges();
         }
 
-        public void UpdateOrders(OrdersUpdateModel updateOrders)
+        public void UpdateOrders(OrdersUpdateModel updateModel)
         {
-            Orders ordersToUpdate = _shopcontext.Orders.Find(updateOrders.orderid);
+            Orders ordersToUpdate = _shopcontext.Orders.Find(updateModel.orderid);
 
             if (ordersToUpdate != null)
             {
-                ordersToUpdate.UpdateFromModel(updateOrders);
+                ordersToUpdate.UpdateFromModel(updateModel);
                 _shopcontext.Orders.Update(ordersToUpdate);
                 _shopcontext.SaveChanges();
             }

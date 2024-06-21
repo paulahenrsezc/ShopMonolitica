@@ -1,20 +1,31 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ShopMonolitica.Web.Data.interfaces;
+using ShopMonolitica.Web.Data.Models.Scores;
 
 namespace ShopMonolitica.Web.Controllers
 {
     public class ScoresController : Controller
     {
+        private readonly IScoresDb scoresDb;
+        public ScoresController(IScoresDb scoresDb)
+        {
+            this.scoresDb = scoresDb;
+        }
+
         // GET: Scores
         public ActionResult Index()
         {
-            return View();
+            var scores = this.scoresDb.GetScores();
+            scores = scores.OrderByDescending(o => o.studentid).ToList();
+            return View(scores);
         }
 
         // GET: Scores/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var scores = this.scoresDb.GetScoresModel(id);
+            return View(scores);
         }
 
         // GET: Scores/Create
@@ -26,10 +37,11 @@ namespace ShopMonolitica.Web.Controllers
         // POST: Scores/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(ScoresSaveModel scoresSave)
         {
             try
             {
+                this.scoresDb.SaveScores(scoresSave);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -41,37 +53,18 @@ namespace ShopMonolitica.Web.Controllers
         // GET: Scores/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var scores = this.scoresDb.GetScoresModel(id);
+            return View(scores);
         }
 
         // POST: Scores/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(ScoresUpdateModel scoresUpdate)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Scores/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Scores/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
+                this.scoresDb.UpdateScores(scoresUpdate);
                 return RedirectToAction(nameof(Index));
             }
             catch

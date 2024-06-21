@@ -7,8 +7,7 @@ namespace ShopMonolitica.Web.Data.interfaces
     {
         void SaveScores(ScoresSaveModel scores);
         void UpdateScores(ScoresUpdateModel updateScores);
-        void RemoveScores();
-        List<ScoresModel> GetScores();
-        ScoresModel GetScore(int studenid);
+        List<ScoresGetModel> GetScores();
+        ScoresGetModel GetScoresModel(int studentid);
     }
 }

@@ -7,8 +7,7 @@ namespace ShopMonolitica.Web.Data.interfaces
     {
         void SaveOrders(OrdersSaveModel orders);
         void UpdateOrders(OrdersUpdateModel updateOrders);
-        void RemoveOrders();
-        List<OrdersModel> GetOrders();
-        OrdersModel GetOrder(int orderid);
+        List<OrdersGetModel> GetOrders();
+        OrdersGetModel GetOrdersModel(int orderid);
     }
 }

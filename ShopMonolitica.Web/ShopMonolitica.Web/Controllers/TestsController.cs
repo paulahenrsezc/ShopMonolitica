@@ -1,20 +1,32 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ShopMonolitica.Web.Data.interfaces;
+using ShopMonolitica.Web.Data.Models.Test;
 
 namespace ShopMonolitica.Web.Controllers
 {
     public class TestsController : Controller
     {
+        private readonly ITestsDb testsDb;
+
+        public TestsController(ITestsDb testsDb)
+        {
+            this.testsDb = testsDb;
+        }
+
         // GET: TestsController1
         public ActionResult Index()
         {
-            return View();
+            var tests = this.testsDb.GetTests();
+            tests = tests.OrderByDescending(o => o.testid).ToList();
+            return View(tests);
         }
 
         // GET: TestsController1/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var tests = this.testsDb.GetTestsModel(id);
+            return View(tests);
         }
 
         // GET: TestsController1/Create
@@ -26,52 +38,11 @@ namespace ShopMonolitica.Web.Controllers
         // POST: TestsController1/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(TestsSaveModel testsSave)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: TestsController1/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: TestsController1/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: TestsController1/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: TestsController1/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
+                this.testsDb.SaveTests(testsSave);
                 return RedirectToAction(nameof(Index));
             }
             catch

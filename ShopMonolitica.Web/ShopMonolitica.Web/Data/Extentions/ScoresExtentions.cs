@@ -1,5 +1,7 @@
-﻿using ShopMonolitica.Web.Data.DbObjects;
+﻿using ShopMonolitica.Web.Data.Context;
+using ShopMonolitica.Web.Data.DbObjects;
 using ShopMonolitica.Web.Data.Entities;
+using ShopMonolitica.Web.Data.Exceptions;
 using ShopMonolitica.Web.Data.Models;
 using ShopMonolitica.Web.Data.Models.Scores;
 using static System.Formats.Asn1.AsnWriter;
@@ -8,26 +10,32 @@ namespace ShopMonolitica.Web.Data.Extentions
 {
     public static class ScoresExtentions
     {
-        public static ScoresModel ConvertScoresEntityScoresModel(this Scores scores)
+        public static ScoresGetModel ConvertScoresEntityScoresModel(this Scores customers)
         {
-            ScoresModel scoresModel = new ScoresModel()
+            if (customers == null)
             {
-                testid = scores.testid,
-                studentid = scores.studentid,
-                score = scores.score
+                throw new ArgumentNullException(nameof(customers), "El parámetro 'scores' no puede ser nulo.");
+            }
+
+            ScoresGetModel customersModel = new ScoresGetModel()
+            {
+                testid = customers.testid,
+                studentid = customers.studentid,
+                score = customers.score
             };
-            return scoresModel;
+            return customersModel;
 
         }
 
-        public static ScoresModel ConvertScoresEntityToScoresModel(this Scores scores)
+        public static ScoresGetModel ConvertScoresEntityToScoresModel(this Scores scores)
         {
-            return new ScoresModel
+            ScoresGetModel scoresGetModel = new ScoresGetModel()
             {
                 testid = scores.testid,
                 studentid = scores.studentid,
                 score = scores.score
             };
+            return scoresGetModel;
         }
 
         public static Scores ConvertScoresSaveModelToScoresEntity(this ScoresSaveModel scoresSaveModel)
@@ -40,13 +48,20 @@ namespace ShopMonolitica.Web.Data.Extentions
             };
         }
 
-        public static void UpdateFromModel(this Scores scores, ScoresUpdateModel updateModel)
+        public static void UpdateFromModel(this Scores scores, ScoresUpdateModel model)
         {
-            scores.testid = scores.testid;
-            scores.studentid = scores.studentid;
-            scores.score = scores.score;
+            scores.score = model.score;
         }
 
+        public static Scores ValidateScoresExists(this ShopContext context, int studentid)
+        {
+            var scores = context.Scores.Find(studentid);
+            if (scores == null)
+            {
+                throw new OrdersDbException("El score no esta registrado");
+            }
+            return scores;
+        }
     }
 }
 

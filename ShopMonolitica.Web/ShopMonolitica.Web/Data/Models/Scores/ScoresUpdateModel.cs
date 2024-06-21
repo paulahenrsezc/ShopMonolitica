@@ -1,7 +1,7 @@
 ﻿namespace ShopMonolitica.Web.Data.Models.Scores
 {
-    public class ScoresUpdateModel : ScoresModel
+    public class ScoresUpdateModel : ScoresBaseModel
     {
-
+        public string studentid { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace ShopMonolitica.Web.BL.Services
 {
-    public class ScoresService : IUsersService
+    public class ScoresService : IScoresService
     {
 
     }

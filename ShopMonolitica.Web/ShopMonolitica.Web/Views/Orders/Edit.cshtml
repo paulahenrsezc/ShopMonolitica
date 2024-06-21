@@ -1,0 +1,82 @@
+﻿@model ShopMonolitica.Web.Data.Models.Orders.OrdersGetModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+
+                <input type="hidden" asp-for="orderid" class="form-control" />
+                <span asp-validation-for="orderid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="orderdate" class="control-label"></label>
+                <input asp-for="orderdate" class="form-control" />
+                <span asp-validation-for="orderdate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="requireddate" class="control-label"></label>
+                <input asp-for="requireddate" class="form-control" />
+                <span asp-validation-for="requireddate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="shippeddate" class="control-label"></label>
+                <input asp-for="shippeddate" class="form-control" />
+                <span asp-validation-for="shippeddate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="freight" class="control-label"></label>
+                <input asp-for="freight" class="form-control" />
+                <span asp-validation-for="freight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="shipname" class="control-label"></label>
+                <input asp-for="shipname" class="form-control" />
+                <span asp-validation-for="shipname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="shipaddress" class="control-label"></label>
+                <input asp-for="shipaddress" class="form-control" />
+                <span asp-validation-for="shipaddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="shipcity" class="control-label"></label>
+                <input asp-for="shipcity" class="form-control" />
+                <span asp-validation-for="shipcity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="shipregion" class="control-label"></label>
+                <input asp-for="shipregion" class="form-control" />
+                <span asp-validation-for="shipregion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="shippostalcode" class="control-label"></label>
+                <input asp-for="shippostalcode" class="form-control" />
+                <span asp-validation-for="shippostalcode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="shipcountry" class="control-label"></label>
+                <input asp-for="shipcountry" class="form-control" />
+                <span asp-validation-for="shipcountry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

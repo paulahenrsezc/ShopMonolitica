@@ -1,0 +1,88 @@
+﻿@model IEnumerable<ShopMonolitica.Web.Data.Models.Orders.OrdersGetModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Orders</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.orderdate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.requireddate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.shippeddate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.freight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.shipname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.shipaddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.shipcity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.shipregion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.shippostalcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.shipcountry)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.orderdate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.requireddate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.shippeddate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.freight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.shipname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.shipaddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.shipcity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.shipregion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.shippostalcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.shipcountry)
+            </td>
+            <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.orderid }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.orderid })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

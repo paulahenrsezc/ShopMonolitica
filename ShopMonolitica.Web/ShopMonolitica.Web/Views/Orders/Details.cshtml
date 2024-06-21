@@ -1,0 +1,83 @@
+﻿@model ShopMonolitica.Web.Data.Models.Orders.OrdersGetModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.orderid)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.orderid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.orderdate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.orderdate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.requireddate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.requireddate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.shippeddate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.shippeddate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.freight)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.freight)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.shipname)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.shipname)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.shipaddress)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.shipaddress)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.shipcity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.shipcity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.shipregion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.shipregion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.shippostalcode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.shippostalcode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.shipcountry)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.shipcountry)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.orderid }) |
+    <a asp-action="Index">Back to List</a>
+</div>

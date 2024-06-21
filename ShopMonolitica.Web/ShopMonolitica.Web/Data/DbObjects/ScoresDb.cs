@@ -1,9 +1,11 @@
-﻿using ShopMonolitica.Web.Data.Context;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+using ShopMonolitica.Web.Data.Context;
 using ShopMonolitica.Web.Data.Entities;
 using ShopMonolitica.Web.Data.Extentions;
 using ShopMonolitica.Web.Data.interfaces;
 using ShopMonolitica.Web.Data.Models.Scores;
-using System.Linq;
+using System.Data;
 
 namespace ShopMonolitica.Web.Data.DbObjects
 {
@@ -15,21 +17,19 @@ namespace ShopMonolitica.Web.Data.DbObjects
         {
             _shopcontext = context;
         }
-        public ScoresModel GetScore(int studenid)
+        public ScoresGetModel GetScoresModel(int studentid)
         {
-            var scores = _shopcontext.Scores.Find(studenid).ConvertScoresEntityScoresModel();
+            var sqlQuery = $"SELECT * FROM Stats.Scores WHERE studentid = @studentid";
+            var parameters = new[] { new SqlParameter("@studentid", SqlDbType.VarChar) { Value = studentid.ToString() } };
+            var scores = _shopcontext.Scores.FromSqlRaw(sqlQuery, parameters).FirstOrDefault().ConvertScoresEntityScoresModel();
             return scores;
         }
 
-        public List<ScoresModel> GetScores()
+        public List<ScoresGetModel> GetScores()
         {
-            return _shopcontext.Scores.Select(scores => scores.ConvertScoresEntityToScoresModel())
-            .ToList();
-        }
-
-        public void RemoveScores()
-        {
-            throw new NotImplementedException();
+            return _shopcontext.Scores
+                .Select(scores => scores.ConvertScoresEntityToScoresModel())
+                .ToList();
         }
 
         public void SaveScores(ScoresSaveModel ScoresSave)
@@ -39,13 +39,13 @@ namespace ShopMonolitica.Web.Data.DbObjects
             _shopcontext.SaveChanges();
         }
 
-        public void UpdateScores(ScoresUpdateModel updateScores)
+        public void UpdateScores(ScoresUpdateModel updateModel)
         {
-            Scores scoreToUpdate = _shopcontext.Scores.Find(updateScores.studentid);
+            Scores scoreToUpdate = _shopcontext.Scores.Find(updateModel.studentid);
 
             if (scoreToUpdate != null)
             {
-                scoreToUpdate.UpdateFromModel(updateScores);
+                scoreToUpdate.UpdateFromModel(updateModel);
                 _shopcontext.Scores.Update(scoreToUpdate);
                 _shopcontext.SaveChanges();
             }

@@ -1,11 +1,15 @@
 ﻿using ShopMonolitica.Web.Data.Core;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ShopMonolitica.Web.Data.Entities
 {
-    public class Scores : BaseEntity
+    [Table("Scores", Schema = "Stats")]
+    public class Scores
     {
-        public int testid { get; set; }
-        public int studentid { get; set; }
-        public int score { get; set; }
+        public string testid { get; set; }
+        [Key]
+        public string studentid { get; set; }
+        public byte score { get; set; }
     }
 }

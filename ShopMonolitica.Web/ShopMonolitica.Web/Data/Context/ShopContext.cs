@@ -14,7 +14,6 @@ namespace ShopMonolitica.Web.Data.Context
         #endregion
 
         #region"Db set"'
-        public DbSet<Employees> Employees { get; set; }
         public DbSet<Orders> Orders { get; set; }
         public DbSet<Scores> Scores { get; set; }
         public DbSet<Tests> Tests { get; set; }

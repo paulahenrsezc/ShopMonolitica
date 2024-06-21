@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ShopMonolitica.Web.Data.Models.Test.TestsGetModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.testid)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.testid)
+            </td>
+            <td>
+                    @Html.ActionLink("Details", "Details", new { id=item.testid }) 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

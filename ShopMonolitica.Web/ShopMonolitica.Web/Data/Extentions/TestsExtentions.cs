@@ -1,5 +1,7 @@
-﻿using ShopMonolitica.Web.Data.DbObjects;
+﻿using ShopMonolitica.Web.Data.Context;
+using ShopMonolitica.Web.Data.DbObjects;
 using ShopMonolitica.Web.Data.Entities;
+using ShopMonolitica.Web.Data.Exceptions;
 using ShopMonolitica.Web.Data.Models.Test;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -7,22 +9,28 @@ namespace ShopMonolitica.Web.Data.Extentions
 {
     public static class TestsExtentions
     {
-        public static TestsModel ConvertTestEntityTestModel(this Tests tests)
+        public static TestsGetModel ConvertTestEntityTestModel(this Tests customers)
         {
-            TestsModel testsModel = new TestsModel()
+            if (customers == null)
             {
-                testid = tests.testid
+                throw new ArgumentNullException(nameof(customers), "El parámetro 'tests' no puede ser nulo.");
+            }
+
+            TestsGetModel customersModel = new TestsGetModel()
+            {
+                testid = customers.testid
             };
 
-            return testsModel;
+            return customersModel;
         }
 
-        public static TestsModel ConvertTestEntityToTestModel(this Tests tests)
+        public static TestsGetModel ConvertTestEntityToTestModel(this Tests tests)
         {
-            return new TestsModel
+            TestsGetModel testsGetModel  = new TestsGetModel()
             {
                 testid = tests.testid
             };
+            return testsGetModel;
         }
 
         public static Tests ConvertTestsSaveModelToTestsEntity(this TestsSaveModel testsSaveModel)
@@ -31,6 +39,16 @@ namespace ShopMonolitica.Web.Data.Extentions
             {
                 testid = testsSaveModel.testid
             };
+        }
+
+        public static Tests ValidateTestsExists(this ShopContext context, string testid)
+        {
+            var test = context.Tests.Find(testid);
+            if (test == null)
+            {
+                throw new OrdersDbException("El test no esta registrado");
+            }
+            return test;
         }
     }
 }
