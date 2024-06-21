@@ -10,40 +10,83 @@ namespace ShopMonolitica.Web.Data.DbObjects
 {
     public class OrderDetailsDb : IOrderDetailsDb
     {
-        private readonly ShopContext _shopcontext;
+        private readonly ShopContext _shopContext;
 
-        public OrderDetailsDb(ShopContext context)
+        public OrderDetailsDb(ShopContext shopContext)
         {
-            _shopcontext = context;
+            _shopContext = shopContext;
         }
 
-        public List<OrderDetailsModel> GetOrderDetails()
+        public List<OrderDetailsBaseModel> GetOrderDetails()
         {
-            return _shopcontext.OrderDetails.Select(orderdetails => orderdetails.ConvertOrdEntityToOrderDetailsModel())
+            return _shopContext.OrderDetails.Select(orderdetails => orderdetails.ConvertOrdEntityToOrderDetailsModel())
             .ToList();
         }
 
-        public OrderDetailsModel GetOrderDetails(int idOrderDetails)
+        public OrderDetailsBaseModel GetOrderDetails(int orderid)
         {
-            var orderdetails = _shopcontext.OrderDetails.Find(idOrderDetails).ConvertOrdEntityOrderDetailsModel();
+            var orderdetails = _shopContext.OrderDetails.Find(orderid).ConvertOrdEntityOrderDetailsModel();
+
+            if (orderdetails is null)
+            {
+                throw new OrderDetailsDbException($"No se pudo encontrar la orden con el id{orderid}");
+            }
+
             return orderdetails;
         }
 
         public void RemoveOrderDetails(OrderDetailsRemoveModel orderdetailsRemove)
         {
-            throw new NotImplementedException();
+            var orderdetails = ValidateOrderDetailsExists(orderdetailsRemove.orderid);
+            _shopContext.OrderDetails.Remove(orderdetails );
+            _shopContext.SaveChanges();
         }
 
         public void SaveOrderDetails(OrderDetailsSaveModel orderdetailsSave)
         {
             OrderDetails orderdetailsEntity = orderdetailsSave.ConvertOrderDetailsSaveModelToEmployeesEntity();
-            _shopcontext.OrderDetails.Add(orderdetailsEntity);
-            _shopcontext.SaveChanges();
+            _shopContext.OrderDetails.Add(orderdetailsEntity);
+            _shopContext.SaveChanges();
         }
 
-        public void UpdateOrderDetails(OrderDetailsUpdateModel updateModel)
+        public void UpdateOrderDetails(OrderDetailsUpdateModel orderDetailsUpdate)
         {
-            throw new NotImplementedException();
+            OrderDetails orderdetailsToUpdate = OrderDetailsGetById(orderDetailsUpdate.orderid);
+
+            if (orderdetailsToUpdate != null)
+            {
+                UpdateOrderDetailsFields(orderdetailsToUpdate,
+                                 orderDetailsUpdate.orderid,
+                                 orderDetailsUpdate.productid,
+                                 orderDetailsUpdate.unitPrice,
+                                 orderDetailsUpdate.qty,
+                                 orderDetailsUpdate.discount);
+
+                var modifyDate = DateTime.Now;
+                var modifyUser = GetOrderDetails();
+
+                _shopContext.SaveChanges();
+            }
+        }
+
+        private void UpdateOrderDetailsFields(OrderDetails orderdetailsToUpdate, int orderid, int productid, decimal unitPrice, short qty, decimal discount)
+        {
+            orderdetailsToUpdate.orderid = orderid;
+            orderdetailsToUpdate.productid = productid;
+            orderdetailsToUpdate.unitPrice = unitPrice;
+            orderdetailsToUpdate.qty = qty;
+            orderdetailsToUpdate.discount = discount;
+        }
+
+        private OrderDetails OrderDetailsGetById(int orderid)
+        {
+            return _shopContext.OrderDetails.FirstOrDefault(od => od.orderid == orderid);
+        }
+
+        private OrderDetails ValidateOrderDetailsExists(int orderid)
+        {
+            var orderdetails = _shopContext.OrderDetails.Find(orderid);            
+            return orderdetails;
         }
 
     }

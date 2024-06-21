@@ -1,4 +1,7 @@
-﻿using ShopMonolitica.Web.Data.Entities;
+﻿using ShopMonolitica.Web.Data.Context;
+using ShopMonolitica.Web.Data.DbObjects;
+using ShopMonolitica.Web.Data.Entities;
+using ShopMonolitica.Web.Data.Exceptions;
 using ShopMonolitica.Web.Data.Models;
 using ShopMonolitica.Web.Data.Models.Employees;
 using System.Diagnostics.Metrics;
@@ -9,43 +12,47 @@ namespace ShopMonolitica.Web.Data.Extentions
 {
     public static class EmployeesExtentions
     {
-        public static EmployeesModel ConvertEmpEntityEmployeesModel(this Employees employees)
+        public static EmployeesBaseModel ConvertEmpEntityEmployeesModel(this Employees employees)
         {
-            EmployeesModel employeesModel = new EmployeesModel()
+            EmployeesBaseModel employeesModel = new EmployeesBaseModel()
             {
-                address = employees.address,
-                birthdate = employees.birthdate,
-                city = employees.city,
-                country = employees.country,
                 empid = employees.empid,
-                firstname = employees.firstname,
-                hiredate = employees.hiredate,
                 lastname = employees.lastname,
-                phone = employees.phone,
-                postalcode = employees.postalcode,
+                firstname = employees.firstname,
+                title = employees.title,
+                titleofcourtesy = employees.titleofcourtesy,
+                birthdate = employees.birthdate,
+                hiredate = employees.hiredate,
+                address = employees.address,
+                city = employees.city,
                 region = employees.region,
-                title = employees.title
+                postalcode = employees.postalcode,
+                country = employees.country,
+                phone = employees.phone,
+                mgrid = employees.mgrid
             };
 
             return employeesModel;
         }
 
-        public static EmployeesModel ConvertEmpEntityToEmployeesModel(this Employees employees)
+        public static EmployeesBaseModel ConvertEmpEntityToEmployeesModel(this Employees employees)
         {
-            return new EmployeesModel
+            return new EmployeesBaseModel
             {
-                address = employees.address,
-                birthdate = employees.birthdate,
-                city = employees.city,
-                country = employees.country,
                 empid = employees.empid,
-                firstname = employees.firstname,
-                hiredate = employees.hiredate,
                 lastname = employees.lastname,
-                phone = employees.phone,
-                postalcode = employees.postalcode,
+                firstname = employees.firstname,
+                title = employees.title,
+                titleofcourtesy = employees.titleofcourtesy,
+                birthdate = employees.birthdate,
+                hiredate = employees.hiredate,
+                address = employees.address,
+                city = employees.city,
                 region = employees.region,
-                title = employees.title
+                postalcode = employees.postalcode,
+                country = employees.country,
+                phone = employees.phone,
+                mgrid = employees.mgrid
             };
         }
 
@@ -53,31 +60,49 @@ namespace ShopMonolitica.Web.Data.Extentions
         {
             return new Employees
             {
-                address = employeesSave.address,
-                birthdate = employeesSave.birthdate,
-                city = employeesSave.city,
-                country = employeesSave.country,
                 empid = employeesSave.empid,
-                firstname = employeesSave.firstname,
-                hiredate = employeesSave.hiredate,
                 lastname = employeesSave.lastname,
-                phone = employeesSave.phone,
-                postalcode = employeesSave.postalcode,
+                firstname = employeesSave.firstname,
+                title = employeesSave.title,
+                titleofcourtesy = employeesSave.titleofcourtesy,
+                birthdate = employeesSave.birthdate,
+                hiredate = employeesSave.hiredate,
+                address = employeesSave.address,
+                city = employeesSave.city,
                 region = employeesSave.region,
-                title = employeesSave.title
+                postalcode = employeesSave.postalcode,
+                country = employeesSave.country,
+                phone = employeesSave.phone,
+                mgrid = employeesSave.mgrid
             };
         }
 
-        public static void UpdateFromModel(this Employees employees, EmployeesUpdateModel updateModel)
+        public static Employees ValidateEmployeesExists(this ShopContext context, int empid)
         {
-            employees.address = employees.address;
-            employees.birthdate = employees.birthdate;
-            employees.city = employees.city;
-            employees.country = employees.country;
-            employees.firstname = employees.firstname;
-            employees.lastname = employees.lastname;
-            employees.phone = employees.phone;
-            employees.title = employees.title;
+            var employees = context.Employees.Find(empid);
+            if (employees == null)
+            {
+                throw new EmployeesDbException("El empleado fue encontrado");
+            }
+            return employees;
+        }
+
+        public static void UpdateFromModels(this Employees employees, EmployeesUpdateModel employeesUpdate)
+        {
+            employeesUpdate.empid = employeesUpdate.empid;
+            employeesUpdate.lastname = employeesUpdate.lastname;
+            employeesUpdate.firstname = employeesUpdate.firstname;
+            employeesUpdate.title = employeesUpdate.title;
+            employeesUpdate.titleofcourtesy = employeesUpdate.titleofcourtesy;
+            employeesUpdate.birthdate = employeesUpdate.birthdate;
+            employeesUpdate.hiredate = employeesUpdate.hiredate;
+            employeesUpdate.address = employeesUpdate.address;
+            employeesUpdate.city = employeesUpdate.city;
+            employeesUpdate.region = employeesUpdate.region;
+            employeesUpdate.postalcode = employeesUpdate.postalcode;
+            employeesUpdate.country = employeesUpdate.country;
+            employeesUpdate.phone = employeesUpdate.phone;
+            employeesUpdate.mgrid = employeesUpdate.mgrid;
 
         }
 

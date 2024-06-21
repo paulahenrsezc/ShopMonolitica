@@ -5,45 +5,107 @@ using ShopMonolitica.Web.Data.interfaces;
 using ShopMonolitica.Web.Data.Models;
 using ShopMonolitica.Web.Data.Models.Employees;
 using ShopMonolitica.Web.Data.Extentions;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
+using System.Net;
+using System.Drawing;
+using System.Diagnostics.Metrics;
 
 namespace ShopMonolitica.Web.Data.DbObjects
 {
     public class EmployeesDb : IEmployeesDb
     {
-        private readonly ShopContext _shopcontext;
+        private readonly ShopContext _shopContext;
 
-        public EmployeesDb(ShopContext context)
+        public EmployeesDb(ShopContext shopContext)
         {
-            _shopcontext = context;
+            _shopContext = shopContext;
         }
 
-        public List<EmployeesModel> GetEmployees()
+        public List<EmployeesBaseModel> GetEmployees()
         {
-            return _shopcontext.Employees.Select(employees => employees.ConvertEmpEntityToEmployeesModel())
+            return _shopContext.Employees
+            .Select(employees => employees.ConvertEmpEntityToEmployeesModel())
             .ToList();
         }
 
-        public EmployeesModel GetEmployees(int idEmployees)
+        public EmployeesBaseModel GetEmployees(int empid)
         {
-            var employees = _shopcontext.Employees.Find(idEmployees).ConvertEmpEntityEmployeesModel();
+            var employees = _shopContext.Employees.Find(empid).ConvertEmpEntityEmployeesModel();
+
+            if(employees is null)
+            {
+                throw new EmployeesDbException($"No se pudo encontrar el empleado con el id{empid}");
+            }
+
             return employees;
         }
 
         public void RemoveEmployees(EmployeesRemoveModel employeesRemove)
         {
-            throw new NotImplementedException();
+            Employees employees = _shopContext.Employees.Find(employeesRemove.empid);
+
+            var employee = _shopContext.ValidateEmployeesExists(employeesRemove.empid);
+            _shopContext.Employees.Remove(employee);
+            _shopContext.SaveChanges();
         }
 
         public void SaveEmployees(EmployeesSaveModel employeesSave)
         {
             Employees employeesEntity = employeesSave.ConvertEmployeesSaveModelToEmployeesEntity();
-            _shopcontext.Employees.Add(employeesEntity);
-            _shopcontext.SaveChanges();
+            _shopContext.Employees.Add(employeesEntity);
+            _shopContext.SaveChanges();
         }
 
-        public void UpdateEmployees(EmployeesUpdateModel updateModel)
+        public void UpdateEmployees(EmployeesUpdateModel employeesUpdate)
         {
-            throw new NotImplementedException();
+            Employees employeesToUpdate = EmployeesGetById(employeesUpdate.empid);
+
+            if (employeesToUpdate != null)
+            {
+                UpdateEmployeesFields(employeesToUpdate,
+                                 employeesUpdate.empid,
+                                 employeesUpdate.lastname,
+                                 employeesUpdate.firstname,
+                                 employeesUpdate.title,
+                                 employeesUpdate.titleofcourtesy,
+                                 employeesUpdate.birthdate,
+                                 employeesUpdate.hiredate,
+                                 employeesUpdate.address,
+                                 employeesUpdate.city,
+                                 employeesUpdate.region,
+                                 employeesUpdate.postalcode,
+                                 employeesUpdate.country,
+                                 employeesUpdate.phone,
+                                 employeesUpdate.mgrid);
+
+                var modifyDate = DateTime.Now;
+                var modifyUser = GetEmployees();
+
+                _shopContext.SaveChanges();
+            }
+        }
+
+        private void UpdateEmployeesFields(Employees employeesToUpdate, int empid, string lastname, string firstname, string title, string titleofcourtesy, DateTime birthdate, DateTime hiredate, string address, string city, string? region, string? postalcode, string country, string phone, int? mgrid)
+        {
+            employeesToUpdate.empid = empid;
+            employeesToUpdate.lastname = lastname;
+            employeesToUpdate.firstname = firstname;
+            employeesToUpdate.title = title;
+            employeesToUpdate.titleofcourtesy = titleofcourtesy;
+            employeesToUpdate.birthdate = birthdate;
+            employeesToUpdate.hiredate = hiredate;
+            employeesToUpdate.address = address;
+            employeesToUpdate.city = city;
+            employeesToUpdate.region = region;
+            employeesToUpdate.postalcode = postalcode;
+            employeesToUpdate.country = country;
+            employeesToUpdate.phone = phone;
+            employeesToUpdate.mgrid = mgrid;
+        }
+
+        private Employees EmployeesGetById(int empid)
+        {
+            return _shopContext.Employees.FirstOrDefault(od => od.empid == empid);
         }
 
     }

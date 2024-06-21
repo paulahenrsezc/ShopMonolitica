@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using ShopMonolitica.Web.Data.Context;
 using ShopMonolitica.Web.Data.interfaces;
+using ShopMonolitica.Web.Data.Models;
+using ShopMonolitica.Web.Data.Models.Employees;
 
 namespace ShopMonolitica.Web.Controllers
 {
@@ -13,16 +15,18 @@ namespace ShopMonolitica.Web.Controllers
             this.employeesDb = employeesDb;
         }
         // GET: EmployeesController
-        public ActionResult Index()
+        public IActionResult Index()
         {
             var employees = this.employeesDb.GetEmployees();
+            employees = employees.OrderByDescending(e => e.empid).ToList();
             return View(employees);
         }
 
         // GET: EmployeesController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var employees = this.employeesDb.GetEmployees(id);
+            return View(employees);
         }
 
         // GET: EmployeesController/Create
@@ -34,10 +38,11 @@ namespace ShopMonolitica.Web.Controllers
         // POST: EmployeesController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(EmployeesSaveModel employeesSave)
         {
             try
             {
+                this.employeesDb.SaveEmployees(employeesSave);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -49,43 +54,45 @@ namespace ShopMonolitica.Web.Controllers
         // GET: EmployeesController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var employees = this.employeesDb.GetEmployees(id);
+            return View(employees);
         }
 
         // POST: EmployeesController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(EmployeesUpdateModel employeesUpdate)
         {
             try
             {
+                this.employeesDb.UpdateEmployees(employeesUpdate);
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch 
             {
-                return View();
+                return View(employeesUpdate);
             }
         }
 
-        // GET: EmployeesController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
+        //// GET: EmployeesController/Delete/5
+        //public ActionResult Delete(int id)
+        //{
+        //    return View();
+        //}
 
-        // POST: EmployeesController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        //// POST: EmployeesController/Delete/5
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Delete(int id, IFormCollection collection)
+        //{
+        //    try
+        //    {
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    catch
+        //    {
+        //        return View();
+        //    }
+        //}
     }
 }

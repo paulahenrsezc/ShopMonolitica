@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ShopMonolitica.Web.Data.Models.OrderDetails.OrderDetailsBaseModel>
+
+@{
+    ViewData["Title"] = "Order Details";
+}
+
+<h1>Order Details</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.orderid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.productid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.unitPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.qty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.discount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.orderid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.productid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.unitPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.qty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.discount)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.orderid }) |
+                @Html.ActionLink("Details", "Details", new { id=item.orderid }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.orderid })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

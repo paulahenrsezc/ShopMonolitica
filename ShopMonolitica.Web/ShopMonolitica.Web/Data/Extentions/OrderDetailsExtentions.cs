@@ -1,15 +1,20 @@
 ﻿using ShopMonolitica.Web.Data.Entities;
 using ShopMonolitica.Web.Data.Models.OrderDetails;
 using ShopMonolitica.Web.Data.Models;
+using ShopMonolitica.Web.Data.Exceptions;
+using ShopMonolitica.Web.Data.Context;
+using ShopMonolitica.Web.Data.DbObjects;
 
 namespace ShopMonolitica.Web.Data.Extentions
 {
     public static class OrderDetailsExtentions
     {
-        public static OrderDetailsModel ConvertOrdEntityOrderDetailsModel(this OrderDetails orderdetails)
+        public static OrderDetailsBaseModel ConvertOrdEntityOrderDetailsModel(this OrderDetails orderdetails)
         {
-            OrderDetailsModel orderdetailsModel = new OrderDetailsModel()
+            OrderDetailsBaseModel orderdetailsModel = new OrderDetailsBaseModel()
             {
+                orderid = orderdetails.orderid,
+                productid = orderdetails.productid,
                 unitPrice = orderdetails.unitPrice,
                 qty = orderdetails.qty,
                 discount = orderdetails.discount
@@ -18,10 +23,12 @@ namespace ShopMonolitica.Web.Data.Extentions
             return orderdetailsModel;
         }
 
-        public static OrderDetailsModel ConvertOrdEntityToOrderDetailsModel(this OrderDetails orderdetails)
+        public static OrderDetailsBaseModel ConvertOrdEntityToOrderDetailsModel(this OrderDetails orderdetails)
         {
-            return new OrderDetailsModel
+            return new OrderDetailsBaseModel
             {
+                orderid = orderdetails.orderid,
+                productid = orderdetails.productid,
                 unitPrice = orderdetails.unitPrice,
                 qty = orderdetails.qty,
                 discount = orderdetails.discount
@@ -32,17 +39,31 @@ namespace ShopMonolitica.Web.Data.Extentions
         {
             return new OrderDetails
             {
+                orderid = orderdetailsSave.orderid,
+                productid = orderdetailsSave.productid,
                 unitPrice = orderdetailsSave.unitPrice,
                 qty = orderdetailsSave.qty,
                 discount = orderdetailsSave.discount
             };
         }
 
-        public static void UpdateFromModel(this OrderDetails orderdetails, OrderDetailsUpdateModel updateModel)
+        public static OrderDetails ValidateOrderDetailsExists(this ShopContext context, int orderid)
         {
-            orderdetails.unitPrice = orderdetails.unitPrice;
-            orderdetails.qty = orderdetails.qty;
-            orderdetails.discount = orderdetails.discount;
+            var orderdetails = context.OrderDetails.Find(orderid);
+            if (orderdetails == null)
+            {
+                throw new OrderDetailsDbException("La orden no fue encontrada");
+            }
+            return orderdetails;
+        }
+
+        public static void UpdateFromModels(this OrderDetails orderdetails, OrderDetailsUpdateModel orderdetailsUpdate)
+        {
+            orderdetailsUpdate.orderid = orderdetailsUpdate.orderid;
+            orderdetailsUpdate.productid = orderdetailsUpdate.productid;
+            orderdetailsUpdate.unitPrice = orderdetailsUpdate.unitPrice;
+            orderdetailsUpdate.qty = orderdetailsUpdate.qty;
+            orderdetailsUpdate.discount = orderdetailsUpdate.discount;
 
         }
     }

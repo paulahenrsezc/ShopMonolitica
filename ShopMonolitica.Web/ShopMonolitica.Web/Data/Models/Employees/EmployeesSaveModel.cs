@@ -1,7 +1,10 @@
-﻿namespace ShopMonolitica.Web.Data.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ShopMonolitica.Web.Data.Models.Employees
 {
-    public class EmployeesSaveModel : EmployeesModel
+    public class EmployeesSaveModel : EmployeesBaseModel
     {
-        public int creation_user { get; set; }
+        [Key]
+        public int empid { get; set; }
     }
 }

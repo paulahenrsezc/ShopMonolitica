@@ -1,9 +1,8 @@
 ﻿namespace ShopMonolitica.Web.Data.Models.OrderDetails
 {
-    public class OrderDetailsUpdateModel : OrderDetailsModel
+    public class OrderDetailsUpdateModel : OrderDetailsBaseModel
     {
-        public int orderid { get; set; }
-        public int? productid { get; set; }
-
+        public DateTime? modify_date { get; set; }
+        public int? modify_user { get; set; }
     }
 }

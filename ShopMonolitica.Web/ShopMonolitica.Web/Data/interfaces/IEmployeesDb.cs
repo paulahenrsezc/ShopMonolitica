@@ -7,9 +7,9 @@ namespace ShopMonolitica.Web.Data.interfaces
     public interface IEmployeesDb
     {
         void SaveEmployees(EmployeesSaveModel employeesSave);
-        void UpdateEmployees(EmployeesUpdateModel updateModel);
+        void UpdateEmployees(EmployeesUpdateModel employeesUpdate);
         void RemoveEmployees(EmployeesRemoveModel employeesRemove);
-        List<EmployeesModel> GetEmployees();
-        EmployeesModel GetEmployees(int idEmployees);
+        List<EmployeesBaseModel> GetEmployees();
+        EmployeesBaseModel GetEmployees(int empid);
     }
 }

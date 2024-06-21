@@ -1,0 +1,87 @@
+﻿@model ShopMonolitica.Web.Data.Models.Employees.EmployeesSaveModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create Employee</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div> 
+            <div class="form-group">
+                <label asp-for="lastname" class="control-label"></label>
+                <input asp-for="lastname" class="form-control" />
+                <span asp-validation-for="lastname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="firstname" class="control-label"></label>
+                <input asp-for="firstname" class="form-control" />
+                <span asp-validation-for="firstname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="title" class="control-label"></label>
+                <input asp-for="title" class="form-control" />
+                <span asp-validation-for="title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="titleofcourtesy" class="control-label"></label>
+                <input asp-for="titleofcourtesy" class="form-control" />
+                <span asp-validation-for="titleofcourtesy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="birthdate" class="control-label"></label>
+                <input asp-for="birthdate" class="form-control" />
+                <span asp-validation-for="birthdate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="hiredate" class="control-label"></label>
+                <input asp-for="hiredate" class="form-control" />
+                <span asp-validation-for="hiredate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="address" class="control-label"></label>
+                <input asp-for="address" class="form-control" />
+                <span asp-validation-for="address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="city" class="control-label"></label>
+                <input asp-for="city" class="form-control" />
+                <span asp-validation-for="city" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="region" class="control-label"></label>
+                <input asp-for="region" class="form-control" />
+                <span asp-validation-for="region" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="postalcode" class="control-label"></label>
+                <input asp-for="postalcode" class="form-control" />
+                <span asp-validation-for="postalcode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="country" class="control-label"></label>
+                <input asp-for="country" class="form-control" />
+                <span asp-validation-for="country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="phone" class="control-label"></label>
+                <input asp-for="phone" class="form-control" />
+                <span asp-validation-for="phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

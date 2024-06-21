@@ -1,11 +1,15 @@
 ﻿using ShopMonolitica.Web.Data.Core;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ShopMonolitica.Web.Data.Entities
 {
+    [Table("OrderDetails", Schema = "Sales")]
     public class OrderDetails
     {
-        public int? orderid { get; set; }
-        public int? productid { get; set; }
+        [Key]
+        public int orderid { get; set; }
+        public int productid { get; set; }
         public decimal unitPrice { get; set; }
         public short qty { get; set; }
         public decimal discount { get; set; }

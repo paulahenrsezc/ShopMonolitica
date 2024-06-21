@@ -7,9 +7,9 @@ namespace ShopMonolitica.Web.Data.interfaces
     public interface IOrderDetailsDb
     {
         void SaveOrderDetails(OrderDetailsSaveModel orderdetailsSave);
-        void UpdateOrderDetails(OrderDetailsUpdateModel updateModel);
+        void UpdateOrderDetails(OrderDetailsUpdateModel orderdetailsUpdate);
         void RemoveOrderDetails(OrderDetailsRemoveModel orderdetailsRemove);
-        List<OrderDetailsModel> GetOrderDetails();
-        OrderDetailsModel GetOrderDetails(int idOrderDetails);
+        List<OrderDetailsBaseModel> GetOrderDetails();
+        OrderDetailsBaseModel GetOrderDetails(int orderid);
     }
 }

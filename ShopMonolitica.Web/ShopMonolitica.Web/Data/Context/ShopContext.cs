@@ -17,5 +17,14 @@ namespace ShopMonolitica.Web.Data.Context
         public DbSet<Employees> Employees { get; set; }
         public DbSet<OrderDetails> OrderDetails { get; set; }
         #endregion
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Employees>()
+                .ToTable("Employees", "HR");
+            modelBuilder.Entity<OrderDetails>()
+                .ToTable("OrderDetails", "Sales");
+        }
+
     }
 }

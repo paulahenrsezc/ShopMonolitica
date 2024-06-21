@@ -1,0 +1,50 @@
+﻿@model ShopMonolitica.Web.Data.Models.OrderDetails.OrderDetailsBaseModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input type="hidden"  asp-for="orderid" class="form-control" />
+                <span asp-validation-for="orderid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="hidden" asp-for="productid" class="form-control" />
+                <span asp-validation-for="productid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="unitPrice" class="control-label"></label>
+                <input asp-for="unitPrice" class="form-control" type="number" step="0.001" />
+                <span asp-validation-for="unitPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="qty" class="control-label"></label>
+                <input asp-for="qty" class="form-control" />
+                <span asp-validation-for="qty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="discount" class="control-label"></label>
+                <input asp-for="discount" class="form-control" type="number" step="0.001" />
+                <span asp-validation-for="discount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
