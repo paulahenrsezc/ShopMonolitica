@@ -5,6 +5,7 @@ using ShopMonolitica.Web.Data.Models;
 using ShopMonolitica.Web.Data.ProductModel;
 using ShopMonolitica.Web.Data.Extension;
 using ShopMonolitica.Web.Data.ProductModelos;
+using ShopMonolitica.Web.Data.Exceptions;
 
 
 namespace ShopMonolitica.Web.Data.DbObjects
@@ -24,9 +25,14 @@ namespace ShopMonolitica.Web.Data.DbObjects
             ).ToList();
         }
 
-        public ProductsModel GetProducts(int productid)
+        public ProductsModel GetProduct(int productid)
         {
             var products = _context.Products.Find(productid).ConvertProductEntitieModel();
+
+            if (products != null)
+            {
+                throw new ProductsException($"El producto no se encontro el producto con el id {productid}");
+            }
 
             return products;
             
@@ -46,9 +52,9 @@ namespace ShopMonolitica.Web.Data.DbObjects
         }
 
 
-        public void SaveProducts(ProductSaveModel productsave)
+        public void SaveProducts(ProductSaveModel products)
         {
-            Products saveEntity = productsave.ConvertProductSaveModel();
+            Products saveEntity = products.ConvertProductSaveModel();
 
             _context.Products.Add(saveEntity);
             _context.SaveChanges();     
@@ -60,10 +66,13 @@ namespace ShopMonolitica.Web.Data.DbObjects
             Products productsToUpdate = _context.Products.Find(products.productid);
 
             if (productsToUpdate != null)
-            
-                productsToUpdate.ConvertProductUpdateModel();
+            {
+                productsToUpdate.ConvertProductUpdateModel  ();
                 _context.Products.Update(productsToUpdate);
                 _context.SaveChanges();
+            }
+            
+               
             
         }
     }

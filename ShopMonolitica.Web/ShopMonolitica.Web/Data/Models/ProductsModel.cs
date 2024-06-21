@@ -12,8 +12,7 @@ namespace ShopMonolitica.Web.Data.Models
         public double unitprice { get; set;}
 
         public bool discontinued { get; set;}
-        public int? categoryid { get; set;}
-        public int? supplierid { get; set;}
+
 
 
     }

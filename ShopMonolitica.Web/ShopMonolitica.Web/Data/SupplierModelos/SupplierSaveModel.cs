@@ -2,8 +2,8 @@
 
 namespace ShopMonolitica.Web.Data.SupplierModelos
 {
-    public class SupplierSaveModel: SuppliersModel
+    public class SupplierSaveModel: SupplierBaseModel
     {
-
+        public int supplierid { get; set; }
     }
 }

@@ -14,5 +14,13 @@ namespace ShopMonolitica.Web.Data.Context
 
         public DbSet<Suppliers> Suppliers { get; set; }
         #endregion
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Products>()
+                .ToTable("Products", "Production");
+            modelBuilder.Entity<Suppliers>()
+                .ToTable("Suppliers", "Production");
+
+        }
     }
 }

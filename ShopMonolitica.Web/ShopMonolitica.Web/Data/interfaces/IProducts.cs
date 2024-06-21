@@ -13,7 +13,7 @@ namespace ShopMonolitica.Web.Data.interfaces
         void RemoveProducts(ProductsRemoveModel productsRemove);
      
         List<ProductsModel> GetProducts();
-        ProductsModel GetProducts(int productid);
+        ProductsModel GetProduct(int productid);
  
        
     }

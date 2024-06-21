@@ -9,8 +9,8 @@ namespace ShopMonolitica.Web.Data.interfaces
         void SaveSuppliers(SupplierSaveModel suppliersave);
         void UpdatesSuppliers(SupplierUpdateModel suppliers);
         void RemoveSuppliers(SupplierRemoveModel suppliers);
-        SuppliersModel GetSuppliers(int SupplierId);
-        List<SuppliersModel> GetSuppliers();
+        SuppliersModel GetSupplier(int Supplierid);
+        List<SupplierGetModel> GetSuppliers();
         
     }
 }

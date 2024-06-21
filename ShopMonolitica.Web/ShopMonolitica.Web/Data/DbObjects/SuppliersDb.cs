@@ -1,5 +1,6 @@
 ﻿using ShopMonolitica.Web.Data.Context;
 using ShopMonolitica.Web.Data.Entities;
+using ShopMonolitica.Web.Data.Exceptions;
 using ShopMonolitica.Web.Data.Extension;
 using ShopMonolitica.Web.Data.interfaces;
 using ShopMonolitica.Web.Data.Models;
@@ -15,15 +16,20 @@ namespace ShopMonolitica.Web.Data.DbObjects
         {
             _context = context;
         }
-        public SuppliersModel GetSuppliers(int SupplierId)
+        public SuppliersModel GetSupplier(int supplierid)
         {
-           var Suppliers = _context.Suppliers.Find(SupplierId).ConvertSupplierEntitieModel();
+           var Suppliers = _context.Suppliers.Find(supplierid).ConvertSupplierEntitieModel();
+
+            if (Suppliers is null) 
+            {
+                throw new SuppliersException($"No se encontro el suplidor con el id {supplierid}");
+            }
 
             return Suppliers;
 
         }
 
-        public List<SuppliersModel> GetSuppliers()
+        public List<SupplierGetModel> GetSuppliers()
         {
             return _context.Suppliers.Select(suppliers =>suppliers.ConvertSupplierEntitieModel()).ToList();
         }
@@ -38,22 +44,20 @@ namespace ShopMonolitica.Web.Data.DbObjects
             Suppliers suppliersentity = suppliersave.ConvertSupplierSaveEntitieModel();
 
             _context.Suppliers.Add(suppliersentity);
+
+            _context.SaveChanges();
         }
 
         public void UpdatesSuppliers(SupplierUpdateModel suppliers)
         {
-            Suppliers supplierToUpdate = _context.Suppliers.Find(suppliers.SupplierId);
+            var updatedSuppliers = _context.Suppliers.FirstOrDefault(c => c.supplierid == suppliers.supplierid);
 
-            if (supplierToUpdate != null)
-
-            supplierToUpdate.ConvertSupplierEntitieModel();
-            _context.Suppliers.Update(supplierToUpdate);
-            _context.SaveChanges();
-
-            
-
+            if (updatedSuppliers != null) 
+            {
+                updatedSuppliers.SupplierUpdateEntitieModel(suppliers);
+                _context.Suppliers.Update(updatedSuppliers);
+                _context.SaveChanges();
+            }
         }
-
-        
     }
 }

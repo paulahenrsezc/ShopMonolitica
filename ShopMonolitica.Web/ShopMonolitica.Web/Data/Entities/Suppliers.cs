@@ -5,11 +5,10 @@ namespace ShopMonolitica.Web.Data.Entities
 {
     public class Suppliers : PersonBase
     {
+        [Key]
+        public int supplierid { get; set; }
 
-        public int SupplierId { get; set; }
 
-
-   
     }
 
 }
