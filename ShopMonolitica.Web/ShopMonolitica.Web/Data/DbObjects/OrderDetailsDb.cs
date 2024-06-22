@@ -17,6 +17,7 @@ namespace ShopMonolitica.Web.Data.DbObjects
             _shopContext = shopContext;
         }
 
+
         public List<OrderDetailsBaseModel> GetOrderDetails()
         {
             return _shopContext.OrderDetails.Select(orderdetails => orderdetails.ConvertOrdEntityToOrderDetailsModel())
