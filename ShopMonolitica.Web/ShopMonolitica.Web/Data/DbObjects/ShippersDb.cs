@@ -5,7 +5,6 @@ using ShopMonolitica.Web.Data.Extensions;
 using ShopMonolitica.Web.Data.Extentions;
 using ShopMonolitica.Web.Data.interfaces;
 using ShopMonolitica.Web.Data.Models;
-using System.Runtime.Intrinsics.Arm;
 
 namespace ShopMonolitica.Web.Data.DbObjects
 {
