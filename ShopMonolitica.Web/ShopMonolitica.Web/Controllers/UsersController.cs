@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ShopMonolitica.Web.BL.Core;
+using ShopMonolitica.Web.BL.Interfaces;
+using ShopMonolitica.Web.BL.Services;
 using ShopMonolitica.Web.Data.Context;
 using ShopMonolitica.Web.Data.DbObjects;
 using ShopMonolitica.Web.Data.interfaces;
@@ -9,27 +12,38 @@ namespace ShopMonolitica.Web.Controllers
 {
     public class UsersController : Controller
     {
-        private readonly IUsersDb _usersDb;
+        private readonly IUsersService _usersService;
 
-        public UsersController(IUsersDb usersDb)
+        public UsersController(IUsersService usersService)
         {
-           
-           _usersDb = usersDb;
+
+            _usersService = usersService;
         }
 
         // GET: UsersController
         public ActionResult Index()
         {
-            var users = _usersDb.GetUsers();
-            users = users.OrderByDescending(c => c.UserId).ToList();
+            var result = _usersService.GetUsers();
+
+            if (!result.Success)
+                ViewBag.Message = result.Menssage;
+
+            var users = (List<UsersModel>)result.Data;
             return View(users);
         }
 
         // GET: UsersController/Details/5
         public ActionResult Details(int id)
         {
-            var users = _usersDb.GetUsers(id);
-            return View(users);
+            var users = _usersService.GetUsers(id);
+
+            if (!users.Success)
+            {
+                ViewBag.Message = users.Menssage;
+                return View(new UsersModel());
+            }
+
+            return View((UsersModel)users.Data);
         }
 
         // GET: UsersController/Create
@@ -45,20 +59,36 @@ namespace ShopMonolitica.Web.Controllers
         {
             try
             {
-                _usersDb.SaveUser(usersSave);
-                return RedirectToAction(nameof(Index));
+                ServiceResult result = _usersService.SaveUsers(usersSave);
+                if (!result.Success)
+                {
+
+                    ViewBag.ValidationResult = result;
+                    return View(usersSave);
+                }
+
+                return RedirectToAction("Index");
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                ViewBag.Message = ex.Message;
+                return View(usersSave);
             }
         }
 
         // GET: UsersController/Edit/5
         public ActionResult Edit(int id)
         {
-            var users = _usersDb.GetUsers(id);
-            return View(users);
+            var serviceResult = _usersService.GetUsers(id);
+            if (serviceResult.Success)
+            {
+                return View(serviceResult.Data);
+            }
+            else
+            {
+                ViewBag.Message = serviceResult.Menssage;
+                return View(new ShopMonolitica.Web.Data.Models.UsersModel());
+            }
         }
 
         // POST: UsersController/Edit/5
@@ -68,32 +98,56 @@ namespace ShopMonolitica.Web.Controllers
         {
             try
             {
-                _usersDb.UpdateUser(usersSave);
+                var result = _usersService.UpdateUsers(usersSave);
+
+                if (!result.Success)
+                {
+                    ViewBag.Message = result.Menssage;
+                    return View(usersSave);
+                }
+
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                ViewBag.Message = ex.Message;
+                return View(usersSave);
             }
         }
 
         // GET: UsersController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var serviceResult = _usersService.GetUsers(id);
+            if (serviceResult.Success)
+            {
+                return View(serviceResult.Data);
+            }
+            else
+            {
+                ViewBag.Message = serviceResult.Menssage;
+                return View(new ShopMonolitica.Web.Data.Models.UsersRemoveModel());
+            }
         }
 
-        // POST: UsersController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(UsersRemoveModel usersRemove)
         {
             try
             {
+                var result = _usersService.RemoveUsers(usersRemove);
+                if (!result.Success)
+                {
+                    ViewBag.Message = result.Menssage;
+                    return View();
+                }
+
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch (Exception ex)
             {
+                ViewBag.Message = ex.Message;
                 return View();
             }
         }

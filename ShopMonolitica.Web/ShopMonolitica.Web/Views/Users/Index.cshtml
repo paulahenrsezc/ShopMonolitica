@@ -9,6 +9,10 @@
 <p>
     <a asp-action="Create">Create New User</a>
 </p>
+@if (ViewBag.Message is null)
+{
+    <span class="alert-danger">@ViewBag.Message</span>
+}
 <table class="table">
     <thead>
         <tr>
@@ -39,7 +43,7 @@
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id=item.UserId }) |
                 @Html.ActionLink("Details", "Details", new { id=item.UserId }) |
-@*                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }) *@
+        @*         @Html.ActionLink("Delete", "Delete", new {  id=item.UserId })  *@
             </td>
         </tr>
 }

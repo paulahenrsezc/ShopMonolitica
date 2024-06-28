@@ -1,6 +1,6 @@
 ﻿namespace ShopMonolitica.Web.Data.Models
 {
-    public class UsersRemoveModel
+    public class UsersRemoveModel : UsersModel
     {
     }
 }

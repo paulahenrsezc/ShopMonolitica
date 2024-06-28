@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ShopMonolitica.Web.BL.Core;
+using ShopMonolitica.Web.BL.Interfaces;
 using ShopMonolitica.Web.Data.interfaces;
 using ShopMonolitica.Web.Data.Models;
 
@@ -6,26 +8,37 @@ namespace ShopMonolitica.Web.Controllers
 {
     public class CustomersController : Controller
     {
-        private readonly ICustomersDb _customersDb;
+        private readonly ICustomersService _customersService;
 
-        public CustomersController(ICustomersDb customersDb)
+        public CustomersController(ICustomersService customersService)
         {
 
-            _customersDb = customersDb;
+            _customersService = customersService;
         }
         // GET: CustomersController
         public ActionResult Index()
         {
-            var customers = _customersDb.GetCustomers();
-            customers = customers.OrderByDescending(c => c.custid).ToList();
+            var result = _customersService.GetCustomers();
+
+           if (!result.Success)
+                ViewBag.Message = result.Menssage;
+
+            var customers = (List<CustomersModel>)result.Data;
             return View(customers);
         }
 
         // GET: CustomersController/Details/5
         public ActionResult Details(int id)
         {
-            var customers = _customersDb.GetCustomers(id);
-            return View(customers);
+            var customer = _customersService.GetCustomers(id);
+
+            if (!customer.Success)
+            {
+                ViewBag.Message = customer.Menssage;
+                return View(new CustomersModel());
+            }
+
+            return View((CustomersModel)customer.Data);
         }
 
         // GET: CustomersController/Create
@@ -34,48 +47,67 @@ namespace ShopMonolitica.Web.Controllers
             return View();
         }
 
-        // POST: CustomersController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(CustomersSaveModel customersSave)
         {
             try
             {
-                _customersDb.SaveCustomers(customersSave);
-                return RedirectToAction(nameof(Index));
+                ServiceResult result = _customersService.SaveCustomers(customersSave);
+                if (!result.Success)
+                {
+                   
+                    ViewBag.ValidationResult = result;
+                    return View(customersSave);
+                }
+
+                return RedirectToAction("Index");
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                ViewBag.Message = ex.Message;
+                return View(customersSave);
             }
         }
 
         //GET: CustomersController/Edit/5
         public ActionResult Edit(int id)
         {
-            var customers = _customersDb.GetCustomers(id);
-            return View(customers);
+            var serviceResult = _customersService.GetCustomers(id);
+            if (serviceResult.Success)
+            {
+                return View(serviceResult.Data);
+            }
+            else
+            {
+                ViewBag.Message = serviceResult.Menssage;
+                return View(new ShopMonolitica.Web.Data.Models.CustomersModel());
+            }
         }
 
-        //POST: CustomersController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(CustomersUpdateModel customersUpdate)
+        public ActionResult Edit(CustomersUpdateModel customersModel)
         {
             try
             {
-                if (!ModelState.IsValid)
+                var result = _customersService.UpdateCustomers(customersModel);
+
+                if (!result.Success)
                 {
-                    return View(customersUpdate);
+                    ViewBag.Message = result.Menssage;
+                    return View(customersModel);
                 }
-                _customersDb.UpdateCustomers(customersUpdate);
+
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                ViewBag.Message = ex.Message;
+                return View(customersModel);
             }
         }
+
 
         ////GET: CustomersController/Delete/5
         //public ActionResult Delete(int id)

@@ -1,11 +1,18 @@
-﻿@model ShopMonolitica.Web.Data.Models.UsersModel
+﻿@using ShopMonolitica.Web.BL.Core
+@model ShopMonolitica.Web.Data.Models.UsersModel
 
 @{
     ViewData["Title"] = "Edit User";
 }
 
 <h1>Edit User</h1>
-
+@if (ViewBag.Message is null)
+{
+    <span class="alert-danger">@ViewBag.Message</span>
+}
+@{
+    var validationResult = ViewBag.ValidationResult as ServiceResult;
+}
 <hr />
 <div class="row">
     <div class="col-md-4">

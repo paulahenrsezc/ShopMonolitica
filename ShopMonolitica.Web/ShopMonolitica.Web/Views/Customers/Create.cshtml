@@ -1,12 +1,18 @@
-﻿@model ShopMonolitica.Web.Data.Models.CustomersSaveModel
+﻿@using ShopMonolitica.Web.BL.Core
+@model ShopMonolitica.Web.Data.Models.CustomersSaveModel
 
 @{
     ViewData["Title"] = "Create Customer";
 }
 
 <h1>Create Customer</h1>
-
-
+@{
+    var validationResult = ViewBag.ValidationResult as ServiceResult;
+}
+@if (ViewBag.Message is null)
+{
+    <span class="alert-danger">@ViewBag.Message</span>
+}
 <hr />
 <div class="row">
     <div class="col-md-4">

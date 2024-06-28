@@ -6,6 +6,10 @@
 
 <h1>Details</h1>
 
+@if (ViewBag.Message is null)
+{
+    <span class="alert-danger">@ViewBag.Message</span>
+}
 <div>
     
     <hr />

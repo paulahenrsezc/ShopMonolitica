@@ -1,0 +1,23 @@
+﻿@model ShopMonolitica.Web.Data.Models.UsersRemoveModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+@if (ViewBag.Message is null)
+{
+    <span class="alert-danger">@ViewBag.Message</span>
+}
+<h3>Are you sure you want to delete this?</h3>
+<div>
+
+    <hr />
+    <dl class="row">
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
