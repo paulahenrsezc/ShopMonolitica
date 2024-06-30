@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using ShopMonolitica.Web.BL.Interfaces;
+using ShopMonolitica.Web.BL.ServiceRegistration;
 using ShopMonolitica.Web.BL.Services;
 using ShopMonolitica.Web.Data.Context;
 using ShopMonolitica.Web.Data.DbObjects;
@@ -12,12 +13,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<ShopContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ShopContext")));
-//Agregar la dependencia de datos//
-builder.Services.AddScoped<ICustomersDb, CustomersDb>();
-builder.Services.AddScoped<IUsersDb, UsersDb>();
-//Agregar la dependencia BL//
-builder.Services.AddTransient<ICustomersService, CustomersService>();
-builder.Services.AddTransient<IUsersService, UsersService>();
+    
+//Registro de dependencia Automático
+ServiceRegistration.RegisterServices(builder.Services, builder.Configuration);
+
 
 var app = builder.Build();
 
