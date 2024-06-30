@@ -1,0 +1,48 @@
+﻿@model IEnumerable<ShopMonolitica.Web.Data.Models.ShippersModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Shippers</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.shipperid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.companyname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.phone)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.shipperid)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.companyname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.phone)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.shipperid }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.shipperid }) |
+                    @*   @Html.ActionLink("Delete", "Delete", new { id = item.shipperid })  *@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

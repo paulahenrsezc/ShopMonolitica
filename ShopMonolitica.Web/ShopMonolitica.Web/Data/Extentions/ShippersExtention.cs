@@ -12,6 +12,7 @@ namespace ShopMonolitica.Web.Data.Extentions
         {
             ShippersModel shipperModel = new ShippersModel()
             {
+                shipperid=shipper.shipperid,
                 companyname = shipper.companyname,
                 phone = shipper.phone
             };
@@ -23,11 +24,29 @@ namespace ShopMonolitica.Web.Data.Extentions
         {
             return new ShippersModel
             {
+                shipperid = shipper.shipperid,
                 companyname = shipper.companyname,
                 phone = shipper.phone
             };
         }
 
+
+        public static Shippers ConvertShipSaveModelToShipperEntity(this ShippersSaveModel shipperModel)
+        {
+            return new Shippers
+            {
+                shipperid = shipperModel.shipperid,
+                companyname = shipperModel.companyname,
+                phone = shipperModel.phone
+            };
+        }
+
+        public static void UpdateFromModel(this Shippers shipperModel, ShippersUpdateModel model)
+        {
+            model.shipperid = model.shipperid;
+            model.companyname = model.companyname;
+            model.phone = model.phone;
+        }
 
 
     }

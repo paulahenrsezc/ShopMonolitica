@@ -6,10 +6,10 @@ namespace ShopMonolitica.Web.Data.interfaces
 {
     public interface ICategoriesDb
     {
-        void Save(CategoriesSaveModel categories);
-        void Update(CategoriesUpdateModel updateModel);
-
+        void SaveCategories(CategoriesSaveModel categories);
+        void UpdateCategories(CategoriesUpdateModel updateModel);
+        void RemoveCategories(CategoriesRemoveModel removeModel);
         List<CategoriesModel> GetCategories();
-        CategoriesModel GetCategoriesModel(int categoryid);
+        CategoriesModel GetCategory(int categoryid);
     }
 };

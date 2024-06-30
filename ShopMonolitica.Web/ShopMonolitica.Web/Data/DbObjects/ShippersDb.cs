@@ -21,15 +21,34 @@ namespace ShopMonolitica.Web.Data.DbObjects
 
         public List<ShippersModel> GetShippers()
         {
-           return _shopContext.Shippers
-                .Select(shippers => shippers
-                .ConvertShipEntityToShippersModel()).ToList();
+            return _shopContext.Shippers
+                 .Select(shippers => shippers
+                 .ConvertShipEntityToShippersModel()).ToList();
         }
-        
-        public ShippersModel GetShippers(int shipperid)
+
+   
+        public ShippersModel GetShippersModel(int shipperid)
         {
             var shippers = _shopContext.Shippers.Find(shipperid);
-            return shippers?.ConvertShipEntityShippersModel();
+            return shippers.ConvertShipEntityShippersModel();
+        }
+
+        public void SaveShippers(ShippersSaveModel shippers)
+        {
+            Shippers shippersEntity = shippers.ConvertShipSaveModelToShipperEntity();
+            _shopContext.Shippers.Add(shippersEntity);
+            _shopContext.SaveChanges();
+        }
+
+        public void UpdateShippers(ShippersUpdateModel updateModel)
+        {
+            Shippers shippersToUpdate = _shopContext.Shippers.Find(updateModel.shipperid);
+            if (shippersToUpdate != null)
+            {
+                shippersToUpdate.UpdateFromModel(updateModel);
+                _shopContext.Shippers.Update(shippersToUpdate);
+                _shopContext.SaveChanges();
+            }
         }
     }
 };

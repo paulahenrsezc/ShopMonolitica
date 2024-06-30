@@ -1,15 +1,32 @@
+using Microsoft.EntityFrameworkCore;
+using ShopMonolitica.Web.BL.Interfaces;
+using ShopMonolitica.Web.BL.Services;
+using ShopMonolitica.Web.Data.Context;
+using ShopMonolitica.Web.Data.DbObjects;
+using ShopMonolitica.Web.Data.interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Agrega servicios al contenedor.
 builder.Services.AddControllersWithViews();
+
+// Configurando el context (ShopContext)
+builder.Services.AddDbContext<ShopContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ShopContext")));
+
+// Registra los servicios con sus interfaces en el DI
+builder.Services.AddScoped<ICategoriesDb, CategoriesDb>();
+builder.Services.AddScoped<ICategoriesService, CategoriesService>();
+builder.Services.AddScoped<IShippersDb,ShippersDb>();
+builder.Services.AddScoped<IShippersService, ShippersService>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configura el pipeline de solicitudes HTTP.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    // El valor predeterminado de HSTS es 30 días. Puede que quieras cambiar esto para escenarios de producción, ve a https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
