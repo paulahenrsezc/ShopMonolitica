@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using ShopMonolitica.Web.BL.Interfaces;
+using ShopMonolitica.Web.Data.DbObjects;
 using ShopMonolitica.Web.Data.Entities;
 using ShopMonolitica.Web.Data.interfaces;
 using ShopMonolitica.Web.Data.Models;
@@ -29,6 +30,7 @@ namespace ShopMonolitica.Web.Controllers
             }
 
             var shippers = result.Data as List<ShippersModel>;
+            shippers = shippers.OrderByDescending(c => c.shipperid).ToList();
 
             return View(shippers);
         }

@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using ShopMonolitica.Web.BL.Interfaces;
+using ShopMonolitica.Web.BL.Core;
 using ShopMonolitica.Web.BL.Services;
 using ShopMonolitica.Web.Data.Context;
 using ShopMonolitica.Web.Data.DbObjects;
@@ -14,7 +14,9 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ShopContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ShopContext")));
 
+//Llamando la clase ServiceIDependency donde se encuentra las inyecciones de dependencia
 ServiceIDependency.ServiceID(builder.Services,builder.Configuration);
+
 var app = builder.Build();
 
 // Configura el pipeline de solicitudes HTTP.

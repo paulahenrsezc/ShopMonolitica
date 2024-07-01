@@ -3,7 +3,7 @@ using ShopMonolitica.Web.BL.Interfaces;
 using ShopMonolitica.Web.Data.Exceptions;
 using ShopMonolitica.Web.Data.interfaces;
 using ShopMonolitica.Web.Data.Models;
-using static ShopMonolitica.Web.Data.Entities.EntityValidatorCategories;
+using static ShopMonolitica.Web.Data.Entities.Entity;
 
 namespace ShopMonolitica.Web.BL.Services
 {
@@ -17,13 +17,6 @@ namespace ShopMonolitica.Web.BL.Services
             this.categoriesDb = categoriesDb;
             this.logger = logger;
         }
-
-        // Log que más se van a utilizar
-        public void LogInformation(string message)
-        {
-            logger.LogInformation(message);
-        }
-
 
         public ServiceResult GetCategories()
         {
@@ -124,6 +117,16 @@ namespace ShopMonolitica.Web.BL.Services
                 logger.LogError(ex, result.Message);
             }
             return result;
+        }
+        // Log que más se van a utilizar
+        public void LogInformation(string message)
+        {
+            logger.LogInformation(message);
+        }
+
+        public void LogError(Exception ex, string message)
+        {
+            logger.LogError(ex, message);
         }
     }
 }

@@ -3,10 +3,16 @@ using System.Text;
 
 namespace ShopMonolitica.Web.Data.Entities
 {
-    public class EntityValidatorCategories
+    public class Entity
     {
+        /// <summary>
+        /// Clase generica para reducir codigo en entidades de Services
+        /// </summary>
         public class EntityValidator<T>
         {
+            /// <summary>
+            /// Metodo generic para valirdar entidades
+            /// </summary>
             public static ServiceResult Validate(T entity, int maxLength = 0)
             {
                 ServiceResult result = new ServiceResult();
@@ -19,7 +25,6 @@ namespace ShopMonolitica.Web.Data.Entities
                 }
 
                 var properties = typeof(T).GetProperties();
-                var hasErrors = false;
                 var errorMessageBuilder = new StringBuilder();
 
                 foreach (var property in properties)
@@ -29,16 +34,26 @@ namespace ShopMonolitica.Web.Data.Entities
 
                     if (value is string && maxLength > 0 && ((string)value).Length > maxLength)
                     {
-                        hasErrors = true;
                         errorMessageBuilder.Append($"El valor de la propiedad '{propertyName}' de la entidad {typeof(T).Name} excede la longitud máxima de {maxLength} caracteres.\n");
                     }
                 }
+                /// <summary>
+                /// Verificar si se encontraron errores
+                /// </summary>
+             
+                if (errorMessageBuilder.Length > 0)
+                {
+                    result.Success = false;
+                    result.Message = errorMessageBuilder.ToString();
+                }
+                else
+                {
+                    result.Success = true;
+                    result.Message = "Validación exitosa";
+                }
 
-                result.Success = !hasErrors;
-                result.Message = errorMessageBuilder.ToString();
                 return result;
             }
-
         }
     }
 }

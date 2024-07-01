@@ -34,6 +34,7 @@ namespace ShopMonolitica.Web.Controllers
             }
 
             var categories = result.Data as List<CategoriesModel>;
+            categories = categories.OrderByDescending(c => c.categoryid).ToList();
             return View(categories);
         }
 
