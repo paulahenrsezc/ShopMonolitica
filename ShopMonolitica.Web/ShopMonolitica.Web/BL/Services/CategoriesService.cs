@@ -24,10 +24,6 @@ namespace ShopMonolitica.Web.BL.Services
             logger.LogInformation(message);
         }
 
-        public void LogError(Exception ex, string message)
-        {
-            logger.LogError(ex, message);
-        }
 
         public ServiceResult GetCategories()
         {

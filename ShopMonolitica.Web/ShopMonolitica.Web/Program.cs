@@ -14,12 +14,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ShopContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ShopContext")));
 
-// Registra los servicios con sus interfaces en el DI
-builder.Services.AddScoped<ICategoriesDb, CategoriesDb>();
-builder.Services.AddScoped<ICategoriesService, CategoriesService>();
-builder.Services.AddScoped<IShippersDb,ShippersDb>();
-builder.Services.AddScoped<IShippersService, ShippersService>();
-
+ServiceIDependency.ServiceID(builder.Services,builder.Configuration);
 var app = builder.Build();
 
 // Configura el pipeline de solicitudes HTTP.

@@ -20,12 +20,6 @@ namespace ShopMonolitica.Web.BL.Services
             this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
-        // Log que más se van a utilizar
-        public void LogInformation(string message)
-        {
-            logger.LogInformation(message);
-        }
-
         public ServiceResult GetShippers()
         {
             ServiceResult result = new ServiceResult();
