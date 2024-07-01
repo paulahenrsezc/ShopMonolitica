@@ -32,7 +32,6 @@ namespace ShopMonolitica.Web.Data.Entities
                         hasErrors = true;
                         errorMessageBuilder.Append($"El valor de la propiedad '{propertyName}' de la entidad {typeof(T).Name} excede la longitud máxima de {maxLength} caracteres.\n");
                     }
-                    // Add more validation logic here if needed (e.g., required fields, numeric ranges)
                 }
 
                 result.Success = !hasErrors;
