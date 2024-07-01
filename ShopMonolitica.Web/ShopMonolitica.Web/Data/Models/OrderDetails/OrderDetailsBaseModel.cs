@@ -8,7 +8,7 @@ namespace ShopMonolitica.Web.Data.Models.OrderDetails
         public int productid { get; set; }
 
         [DataType(DataType.Currency)]
-        public decimal unitPrice { get; set; }
+        public decimal unitprice { get; set; }
         public short qty { get; set; }
 
         [Range(0.000, 1.000, ErrorMessage = "Discount must be between 0.000 and 1.000")]

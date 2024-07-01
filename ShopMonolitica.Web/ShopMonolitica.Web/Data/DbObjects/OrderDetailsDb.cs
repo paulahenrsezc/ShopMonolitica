@@ -39,7 +39,7 @@ namespace ShopMonolitica.Web.Data.DbObjects
         public void RemoveOrderDetails(OrderDetailsRemoveModel orderdetailsRemove)
         {
             var orderdetails = ValidateOrderDetailsExists(orderdetailsRemove.orderid);
-            _shopContext.OrderDetails.Remove(orderdetails );
+            _shopContext.OrderDetails.Remove(orderdetails);
             _shopContext.SaveChanges();
         }
 
@@ -59,22 +59,19 @@ namespace ShopMonolitica.Web.Data.DbObjects
                 UpdateOrderDetailsFields(orderdetailsToUpdate,
                                  orderDetailsUpdate.orderid,
                                  orderDetailsUpdate.productid,
-                                 orderDetailsUpdate.unitPrice,
+                                 orderDetailsUpdate.unitprice,
                                  orderDetailsUpdate.qty,
                                  orderDetailsUpdate.discount);
-
-                var modifyDate = DateTime.Now;
-                var modifyUser = GetOrderDetails();
 
                 _shopContext.SaveChanges();
             }
         }
 
-        private void UpdateOrderDetailsFields(OrderDetails orderdetailsToUpdate, int orderid, int productid, decimal unitPrice, short qty, decimal discount)
+        private void UpdateOrderDetailsFields(OrderDetails orderdetailsToUpdate, int orderid, int productid, decimal unitprice, short qty, decimal discount)
         {
             orderdetailsToUpdate.orderid = orderid;
             orderdetailsToUpdate.productid = productid;
-            orderdetailsToUpdate.unitPrice = unitPrice;
+            orderdetailsToUpdate.unitprice = unitprice;
             orderdetailsToUpdate.qty = qty;
             orderdetailsToUpdate.discount = discount;
         }
@@ -86,7 +83,7 @@ namespace ShopMonolitica.Web.Data.DbObjects
 
         private OrderDetails ValidateOrderDetailsExists(int orderid)
         {
-            var orderdetails = _shopContext.OrderDetails.Find(orderid);            
+            var orderdetails = _shopContext.OrderDetails.Find(orderid);
             return orderdetails;
         }
 

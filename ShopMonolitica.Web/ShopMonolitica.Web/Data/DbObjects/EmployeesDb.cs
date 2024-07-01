@@ -5,10 +5,6 @@ using ShopMonolitica.Web.Data.interfaces;
 using ShopMonolitica.Web.Data.Models;
 using ShopMonolitica.Web.Data.Models.Employees;
 using ShopMonolitica.Web.Data.Extentions;
-using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
-using System.Net;
-using System.Drawing;
-using System.Diagnostics.Metrics;
 
 namespace ShopMonolitica.Web.Data.DbObjects
 {
@@ -42,9 +38,7 @@ namespace ShopMonolitica.Web.Data.DbObjects
 
         public void RemoveEmployees(EmployeesRemoveModel employeesRemove)
         {
-            Employees employees = _shopContext.Employees.Find(employeesRemove.empid);
-
-            var employee = _shopContext.ValidateEmployeesExists(employeesRemove.empid);
+            var employee = ValidateEmployeesExists(employeesRemove.empid);
             _shopContext.Employees.Remove(employee);
             _shopContext.SaveChanges();
         }
@@ -78,9 +72,6 @@ namespace ShopMonolitica.Web.Data.DbObjects
                                  employeesUpdate.phone,
                                  employeesUpdate.mgrid);
 
-                var modifyDate = DateTime.Now;
-                var modifyUser = GetEmployees();
-
                 _shopContext.SaveChanges();
             }
         }
@@ -106,6 +97,12 @@ namespace ShopMonolitica.Web.Data.DbObjects
         private Employees EmployeesGetById(int empid)
         {
             return _shopContext.Employees.FirstOrDefault(od => od.empid == empid);
+        }
+
+        private Employees ValidateEmployeesExists(int empid)
+        {
+            var employees = _shopContext.Employees.Find(empid);
+            return employees;
         }
 
     }

@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using ShopMonolitica.Web.BL.Core;
+using ShopMonolitica.Web.BL.Services;
 using ShopMonolitica.Web.Data.Context;
 using ShopMonolitica.Web.Data.DbObjects;
 using ShopMonolitica.Web.Data.interfaces;
@@ -8,11 +10,17 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<ShopContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ShopContext")));
+builder.Services.AddDbContext<ShopContext>(options => 
+options.UseSqlServer(builder.Configuration.GetConnectionString("ShopContext")));
 
 builder.Services.AddScoped<IEmployeesDb, EmployeesDb>();
 
 builder.Services.AddScoped<IOrderDetailsDb, OrderDetailsDb>();
+
+builder.Services.AddTransient<IEmployeesService, EmployeesService>();
+
+builder.Services.AddTransient<IOrderDetailsService, OrderDetailsService>();
+
 
 builder.Services.AddControllersWithViews();
 

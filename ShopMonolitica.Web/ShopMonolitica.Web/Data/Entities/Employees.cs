@@ -1,5 +1,4 @@
-﻿using ShopMonolitica.Web.Data.Core;
-using System.Buffers.Text;
+﻿using System.Buffers.Text;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 

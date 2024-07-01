@@ -1,5 +1,4 @@
-﻿using ShopMonolitica.Web.Data.Core;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ShopMonolitica.Web.Data.Entities
@@ -10,7 +9,7 @@ namespace ShopMonolitica.Web.Data.Entities
         [Key]
         public int orderid { get; set; }
         public int productid { get; set; }
-        public decimal unitPrice { get; set; }
+        public decimal unitprice { get; set; }
         public short qty { get; set; }
         public decimal discount { get; set; }
     }

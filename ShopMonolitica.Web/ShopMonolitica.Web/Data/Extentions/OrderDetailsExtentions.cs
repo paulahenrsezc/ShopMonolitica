@@ -15,7 +15,7 @@ namespace ShopMonolitica.Web.Data.Extentions
             {
                 orderid = orderdetails.orderid,
                 productid = orderdetails.productid,
-                unitPrice = orderdetails.unitPrice,
+                unitprice = orderdetails.unitprice,
                 qty = orderdetails.qty,
                 discount = orderdetails.discount
             };
@@ -29,7 +29,7 @@ namespace ShopMonolitica.Web.Data.Extentions
             {
                 orderid = orderdetails.orderid,
                 productid = orderdetails.productid,
-                unitPrice = orderdetails.unitPrice,
+                unitprice = orderdetails.unitprice,
                 qty = orderdetails.qty,
                 discount = orderdetails.discount
             };
@@ -41,7 +41,7 @@ namespace ShopMonolitica.Web.Data.Extentions
             {
                 orderid = orderdetailsSave.orderid,
                 productid = orderdetailsSave.productid,
-                unitPrice = orderdetailsSave.unitPrice,
+                unitprice = orderdetailsSave.unitprice,
                 qty = orderdetailsSave.qty,
                 discount = orderdetailsSave.discount
             };
@@ -61,7 +61,7 @@ namespace ShopMonolitica.Web.Data.Extentions
         {
             orderdetailsUpdate.orderid = orderdetailsUpdate.orderid;
             orderdetailsUpdate.productid = orderdetailsUpdate.productid;
-            orderdetailsUpdate.unitPrice = orderdetailsUpdate.unitPrice;
+            orderdetailsUpdate.unitprice = orderdetailsUpdate.unitprice;
             orderdetailsUpdate.qty = orderdetailsUpdate.qty;
             orderdetailsUpdate.discount = orderdetailsUpdate.discount;
 

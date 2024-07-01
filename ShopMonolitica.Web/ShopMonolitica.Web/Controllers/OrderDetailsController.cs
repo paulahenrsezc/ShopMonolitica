@@ -1,7 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using ShopMonolitica.Web.Data.interfaces;
-using ShopMonolitica.Web.Data.Models.Employees;
 using ShopMonolitica.Web.Data.Models.OrderDetails;
 
 namespace ShopMonolitica.Web.Controllers
@@ -76,7 +74,7 @@ namespace ShopMonolitica.Web.Controllers
         // GET: OrderDetailsController/Delete/5
         public ActionResult Delete(int id)
         {
-            var orderdetails = this.orderdetailsDb.GetOrderDetails(id);
+            var orderdetails = orderdetailsDb.GetOrderDetails(id);
             if (orderdetails == null)
             {
                 return NotFound();
@@ -85,17 +83,17 @@ namespace ShopMonolitica.Web.Controllers
         }
 
         // POST: OrderDetailsController/Delete/5
-        [HttpPost]
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
             try
             {
-                var categoryToRemove = new OrderDetailsRemoveModel
+                var orderdetailsToRemove = new OrderDetailsRemoveModel
                 {
                     orderid = id
                 };
-                this.orderdetailsDb.RemoveOrderDetails(categoryToRemove);
+                orderdetailsDb.RemoveOrderDetails(orderdetailsToRemove);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -103,5 +101,6 @@ namespace ShopMonolitica.Web.Controllers
                 return View();
             }
         }
+
     }
 }

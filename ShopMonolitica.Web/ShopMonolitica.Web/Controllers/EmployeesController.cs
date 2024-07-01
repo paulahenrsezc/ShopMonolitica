@@ -1,8 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using ShopMonolitica.Web.Data.Context;
+﻿using Microsoft.AspNetCore.Mvc;
 using ShopMonolitica.Web.Data.interfaces;
-using ShopMonolitica.Web.Data.Models;
 using ShopMonolitica.Web.Data.Models.Employees;
 
 namespace ShopMonolitica.Web.Controllers
@@ -74,25 +71,35 @@ namespace ShopMonolitica.Web.Controllers
             }
         }
 
-        //// GET: EmployeesController/Delete/5
-        //public ActionResult Delete(int id)
-        //{
-        //    return View();
-        //}
+        // GET: EmployeesController/Delete/5
+        public ActionResult Delete(int id)
+        {
+            var employees = employeesDb.GetEmployees(id);
+            if (employees == null)
+            {
+                return NotFound();
+            }
+            return View(employees);
+        }
 
-        //// POST: EmployeesController/Delete/5
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Delete(int id, IFormCollection collection)
-        //{
-        //    try
-        //    {
-        //        return RedirectToAction(nameof(Index));
-        //    }
-        //    catch
-        //    {
-        //        return View();
-        //    }
-        //}
+        // POST: EmployeesController/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            try
+            {
+                var employeesToRemove = new EmployeesRemoveModel
+                {
+                    empid = id
+                };
+                employeesDb.RemoveEmployees(employeesToRemove);
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
     }
 }
