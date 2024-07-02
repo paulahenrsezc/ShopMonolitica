@@ -169,8 +169,6 @@ namespace ShopMonolitica.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View(categoriesRemoveModel);
-            }
 
             try
             {
