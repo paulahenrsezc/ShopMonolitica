@@ -8,11 +8,12 @@ namespace ShopMonolitica.Web.BL.Services
     public class OrderDetailsService : IOrderDetailsService
     {
         private readonly IOrderDetailsDb orderdetailsDb;
-        private readonly ILoggerDb<EmployeesService> _logger;
-        public OrderDetailsService(IOrderDetailsDb orderdetailsDb, ILoggerDb<EmployeesService> logger)
+        private readonly ILoggerDb<OrderDetailsService> _logger;
+        public OrderDetailsService(IOrderDetailsDb orderdetailsDb, ILoggerDb<OrderDetailsService> logger)
         {
             this.orderdetailsDb = orderdetailsDb;
             _logger = logger;
+
         }
 
         public ServiceResult GetOrderDetails()

@@ -21,6 +21,8 @@ builder.Services.AddTransient<IEmployeesService, EmployeesService>();
 
 builder.Services.AddTransient<IOrderDetailsService, OrderDetailsService>();
 
+builder.Services.AddScoped(typeof(ILoggerDb<>), typeof(LoggerDb<>));
+
 
 builder.Services.AddControllersWithViews();
 

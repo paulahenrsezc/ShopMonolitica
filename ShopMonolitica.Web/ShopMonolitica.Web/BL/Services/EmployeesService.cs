@@ -12,12 +12,13 @@ namespace ShopMonolitica.Web.BL.Services
     public class EmployeesService : IEmployeesService
     {
         private readonly IEmployeesDb employeesDb;
-        private readonly ILogger<EmployeesService> logger;
+        private readonly ILoggerDb<EmployeesService> _logger;
 
-        public EmployeesService (IEmployeesDb employeesDb, ILogger<EmployeesService> logger)
+        public EmployeesService (IEmployeesDb employeesDb, ILoggerDb<EmployeesService> logger)
         {
             this.employeesDb = employeesDb;
-            this.logger = logger;
+            _logger = logger;
+
         }
 
         public ServiceResult GetEmployees()
@@ -33,7 +34,7 @@ namespace ShopMonolitica.Web.BL.Services
             {
                 result.Success = false;
                 result.Message = "Ocurrió un error obteniendo los empleados";
-                this.logger.LogError(result.Message, ex.ToString());
+                _logger.LogError(result.Message, ex.ToString());
             }
             return result;
         }
@@ -51,7 +52,7 @@ namespace ShopMonolitica.Web.BL.Services
             {
                 result.Success = false;
                 result.Message = "Ocurrió un error obteniendo los empleados";
-                this.logger.LogError(result.Message, ex.ToString());
+                _logger.LogError(result.Message, ex.ToString());
             }
             return result;
         }
@@ -75,7 +76,7 @@ namespace ShopMonolitica.Web.BL.Services
             {
                 result.Success = false;
                 result.Message = "Ocurrió un error removiendo los datos.";
-                this.logger.LogError(result.Message, ex.ToString());
+                _logger.LogError(result.Message, ex.ToString());
             }
             return result;
         }
@@ -98,7 +99,7 @@ namespace ShopMonolitica.Web.BL.Services
             {
                 result.Success = false;
                 result.Message = "Ocurrió un error grabando los datos.";
-                this.logger.LogError(result.Message, ex.ToString());
+                _logger.LogError(result.Message, ex.ToString());
             }
             return result;
         }
@@ -120,7 +121,7 @@ namespace ShopMonolitica.Web.BL.Services
             {
                 result.Success = false;
                 result.Message = "Ocurrió un error actualizando los datos.";
-                this.logger.LogError(result.Message, ex.ToString());
+                _logger.LogError(result.Message, ex.ToString());
             }
             return result;
         }
