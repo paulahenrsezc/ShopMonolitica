@@ -8,7 +8,7 @@ namespace ShopMonolitica.Web.Data.Extension
 {
     public static class ProductExtension
     {
-        public static ProductsModel ConvertProductEntitieModel(this Products products)
+        public static ProductsModel ConvertProductEntitieModel(this ProductsBaseModel products)
         {
             return new ProductsModel()
             {   
@@ -19,19 +19,22 @@ namespace ShopMonolitica.Web.Data.Extension
   
             };
         }  
-        public static Products ConvertProductSaveModel(this ProductSaveModel productsave)
+        public static ProductsBaseModel ConvertProductSaveModel(this ProductSaveModel productsave)
         {
-            return new Products()
+            return new ProductsBaseModel()
             {
                 productname = productsave.productname,  
                 creation_user = productsave.creation_user,
                 creation_date = productsave.creation_date,
-                unitprice = productsave.unitprice, 
+                unitprice = productsave.unitprice,
+                categoryid = productsave.categoryid,
+                supplierid = productsave.supplierid,
+
 
             };
         }
 
-        public static ProductsModel ConvertProductUpdateModel(this Products productupdate)
+        public static ProductsModel ConvertProductUpdateModel(this ProductsBaseModel productupdate)
         {
            return new ProductsModel   
             {

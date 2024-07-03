@@ -42,7 +42,7 @@ namespace ShopMonolitica.Web.Data.DbObjects
 
         public void RemoveProducts(ProductsRemoveModel productsRemove)
         {
-            Products productToDelete = this._context.Products.Find(productsRemove.productid);
+            ProductsBaseModel productToDelete = this._context.Products.Find(productsRemove.productid);
 
             productToDelete.deleted = productsRemove.deleted;
             productToDelete.delete_date = productsRemove.delete_date;
@@ -54,7 +54,7 @@ namespace ShopMonolitica.Web.Data.DbObjects
 
         public void SaveProducts(ProductSaveModel products)
         {
-            Products saveEntity = products.ConvertProductSaveModel();
+            ProductsBaseModel saveEntity = products.ConvertProductSaveModel();
 
             _context.Products.Add(saveEntity);
             _context.SaveChanges();     
@@ -63,7 +63,7 @@ namespace ShopMonolitica.Web.Data.DbObjects
 
         public void UpdateProducts(ProductUpdateModel products)
         {
-            Products productsToUpdate = _context.Products.Find(products.productid);
+            ProductsBaseModel productsToUpdate = _context.Products.Find(products.productid);
 
             if (productsToUpdate != null)
             {
@@ -74,6 +74,16 @@ namespace ShopMonolitica.Web.Data.DbObjects
             
                
             
+        }
+
+        void IProducts.SaveProducts(ProductBaseModel products)
+        {
+            throw new NotImplementedException();
+        }
+
+        void IProducts.UpdateProducts(ProductBaseModel products)
+        {
+            throw new NotImplementedException();
         }
     }
 

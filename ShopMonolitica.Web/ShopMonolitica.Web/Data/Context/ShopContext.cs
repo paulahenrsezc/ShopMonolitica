@@ -10,13 +10,13 @@ namespace ShopMonolitica.Web.Data.Context
             
         }
         #region "DbSet"
-        public DbSet<Products> Products { get; set; }
+        public DbSet<ProductsBaseModel> Products { get; set; }
 
         public DbSet<Suppliers> Suppliers { get; set; }
         #endregion
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Products>()
+            modelBuilder.Entity<ProductsBaseModel>()
                 .ToTable("Products", "Production");
             modelBuilder.Entity<Suppliers>()
                 .ToTable("Suppliers", "Production");

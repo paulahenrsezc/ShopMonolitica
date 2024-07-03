@@ -14,7 +14,7 @@ namespace ShopMonolitica.Web.Data.interfaces
      
         List<ProductsModel> GetProducts();
         ProductsModel GetProduct(int productid);
- 
-       
+        void SaveProducts(ProductBaseModel products);
+        void UpdateProducts(ProductBaseModel products);
     }
 }
