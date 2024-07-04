@@ -178,24 +178,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "OrdersController.cs",
-              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Controllers\\OrdersController.cs",
-              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Controllers\\OrdersController.cs",
-              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Controllers\\OrdersController.cs",
-              "RelativeToolTip": "ShopMonolitica.Web\\Controllers\\OrdersController.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T17:47:20.526Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -251,12 +238,38 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Program.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Program.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Program.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T16:51:43.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Controllers\\OrdersController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T17:47:20.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Scores\\Index.cshtml",
               "RelativeDocumentMoniker": "ShopMonolitica.Web\\Views\\Scores\\Index.cshtml",
-              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Scores\\Index.cshtml*",
-              "RelativeToolTip": "ShopMonolitica.Web\\Views\\Scores\\Index.cshtml*",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Scores\\Index.cshtml",
+              "RelativeToolTip": "ShopMonolitica.Web\\Views\\Scores\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-21T18:09:49.172Z",
@@ -268,24 +281,11 @@
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Tests\\Index.cshtml",
               "RelativeDocumentMoniker": "ShopMonolitica.Web\\Views\\Tests\\Index.cshtml",
-              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Tests\\Index.cshtml*",
-              "RelativeToolTip": "ShopMonolitica.Web\\Views\\Tests\\Index.cshtml*",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Tests\\Index.cshtml",
+              "RelativeToolTip": "ShopMonolitica.Web\\Views\\Tests\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-21T18:57:06.408Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Program.cs",
-              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Program.cs",
-              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Program.cs*",
-              "RelativeToolTip": "ShopMonolitica.Web\\Program.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T16:51:43.349Z",
               "EditorCaption": ""
             },
             {
