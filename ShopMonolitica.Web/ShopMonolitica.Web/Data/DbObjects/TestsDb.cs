@@ -16,7 +16,7 @@ namespace ShopMonolitica.Web.Data.DbObjects
         {
             _shopcontext = context;
         }
-        public TestsGetModel GetTestsModel(int testid)
+        public TestsGetModel GetTestsModel(string testid)
         {
             var sqlQuery = $"SELECT * FROM Stats.Tests WHERE testid = @testid";
             var parameters = new[] { new SqlParameter("@testid", SqlDbType.VarChar) { Value = testid.ToString() } };

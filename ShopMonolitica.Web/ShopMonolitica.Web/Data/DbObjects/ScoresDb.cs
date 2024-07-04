@@ -17,7 +17,7 @@ namespace ShopMonolitica.Web.Data.DbObjects
         {
             _shopcontext = context;
         }
-        public ScoresGetModel GetScoresModel(int studentid)
+        public ScoresGetModel GetScoresModel(string studentid)
         {
             var sqlQuery = $"SELECT * FROM Stats.Scores WHERE studentid = @studentid";
             var parameters = new[] { new SqlParameter("@studentid", SqlDbType.VarChar) { Value = studentid.ToString() } };

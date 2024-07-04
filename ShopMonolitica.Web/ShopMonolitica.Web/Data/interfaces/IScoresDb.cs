@@ -1,5 +1,4 @@
-﻿using ShopMonolitica.Web.Data.Entities;
-using ShopMonolitica.Web.Data.Models.Scores;
+﻿using ShopMonolitica.Web.Data.Models.Scores;
 
 namespace ShopMonolitica.Web.Data.interfaces
 {
@@ -8,6 +7,6 @@ namespace ShopMonolitica.Web.Data.interfaces
         void SaveScores(ScoresSaveModel scores);
         void UpdateScores(ScoresUpdateModel updateScores);
         List<ScoresGetModel> GetScores();
-        ScoresGetModel GetScoresModel(int studentid);
+        ScoresGetModel GetScoresModel(string studentid);
     }
 }

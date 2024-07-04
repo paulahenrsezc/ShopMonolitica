@@ -1,31 +1,40 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using ShopMonolitica.Web.Data.interfaces;
+﻿using Microsoft.AspNetCore.Mvc;
+using ShopMonolitica.Web.BL.Interfaces;
 using ShopMonolitica.Web.Data.Models.Orders;
 
 namespace ShopMonolitica.Web.Controllers
 {
     public class OrdersController : Controller
     {
-        private readonly IOrdersDb ordersDb;
+        private readonly IOrdersService ordersService;
 
-        public OrdersController(IOrdersDb ordersDb)
+        public OrdersController(IOrdersService ordersService)
         {
-            this.ordersDb = ordersDb;
+            this.ordersService = ordersService;
         }
 
         // GET: Orders
         public ActionResult Index()
         {
-            var orders = this.ordersDb.GetOrders();
+            var result = this.ordersService.GetOrders();
+
+            if (!result.Success)
+                ViewBag.message = result.Message;
+
+            var orders = (List<OrdersGetModel>)result.Data;
             orders = orders.OrderByDescending(o => o.orderid).ToList();
+
             return View(orders);
         }
 
         // GET: Orders/Details/5
         public ActionResult Details(int id)
         {
-            var orders = this.ordersDb.GetOrdersModel(id);
+            var result = this.ordersService.GetOrder(id);
+            if (!result.Success)
+                ViewBag.message = result.Message;
+
+            var orders = (OrdersGetModel)result.Data;
             return View(orders);
         }
 
@@ -42,7 +51,7 @@ namespace ShopMonolitica.Web.Controllers
         {
             try
             {
-                this.ordersDb.SaveOrders(ordersSave);
+                this.ordersService.SaveOrders(ordersSave);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -54,7 +63,7 @@ namespace ShopMonolitica.Web.Controllers
         // GET: Orders/Edit/5
         public ActionResult Edit(int id)
         {
-            var orders = ordersDb.GetOrdersModel(id);
+            var orders = ordersService.GetOrder(id);
             return View(orders);
         }
 
@@ -65,7 +74,7 @@ namespace ShopMonolitica.Web.Controllers
         {
             try
             {
-                this.ordersDb.UpdateOrders(ordersUpdate);
+                this.ordersService.UpdateOrders(ordersUpdate);
                 return RedirectToAction(nameof(Index));
             }
             catch

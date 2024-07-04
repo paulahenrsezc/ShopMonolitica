@@ -6,6 +6,6 @@ namespace ShopMonolitica.Web.Data.interfaces
     {
         void SaveTests(TestsSaveModel tests);
         List<TestsGetModel> GetTests();
-        TestsGetModel GetTestsModel(int testid);
+        TestsGetModel GetTestsModel(string testid);
     }
 }

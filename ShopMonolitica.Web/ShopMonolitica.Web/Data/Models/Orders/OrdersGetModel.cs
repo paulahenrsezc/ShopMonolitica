@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace ShopMonolitica.Web.Data.Models.Orders
+﻿namespace ShopMonolitica.Web.Data.Models.Orders
 {
     public class OrdersGetModel
     {

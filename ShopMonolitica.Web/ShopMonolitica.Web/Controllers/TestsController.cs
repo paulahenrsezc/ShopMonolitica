@@ -1,32 +1,44 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ShopMonolitica.Web.BL.Interfaces;
 using ShopMonolitica.Web.Data.interfaces;
+using ShopMonolitica.Web.Data.Models.Scores;
 using ShopMonolitica.Web.Data.Models.Test;
 
 namespace ShopMonolitica.Web.Controllers
 {
     public class TestsController : Controller
     {
-        private readonly ITestsDb testsDb;
+        private readonly ITestsService testsService;
 
-        public TestsController(ITestsDb testsDb)
+        public TestsController(ITestsService testsService)
         {
-            this.testsDb = testsDb;
+            this.testsService = testsService;
         }
 
         // GET: TestsController1
         public ActionResult Index()
         {
-            var tests = this.testsDb.GetTests();
-            tests = tests.OrderByDescending(o => o.testid).ToList();
+            var result = this.testsService.GetTests();
+
+            if (!result.Success)
+                ViewBag.message = result.Message;
+
+            var tests = (List<TestsGetModel>)result.Data;
+            tests = tests.OrderByDescending(t => t.testid).ToList();
+
             return View(tests);
         }
 
         // GET: TestsController1/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(string id)
         {
-            var tests = this.testsDb.GetTestsModel(id);
-            return View(tests);
+            var result = this.testsService.GetTest(id);
+            if (!result.Success)
+                ViewBag.message = result.Message;
+
+            var test = (TestsGetModel)result.Data;
+            return View(test);
         }
 
         // GET: TestsController1/Create
@@ -42,7 +54,7 @@ namespace ShopMonolitica.Web.Controllers
         {
             try
             {
-                this.testsDb.SaveTests(testsSave);
+                this.testsService.SaveTests(testsSave);
                 return RedirectToAction(nameof(Index));
             }
             catch

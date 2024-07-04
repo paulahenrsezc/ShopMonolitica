@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using ShopMonolitica.Web.BL.Interfaces;
+using ShopMonolitica.Web.BL.Services;
 using ShopMonolitica.Web.Data.Context;
 using ShopMonolitica.Web.Data.DbObjects;
 using ShopMonolitica.Web.Data.interfaces;
@@ -12,6 +14,11 @@ builder.Services.AddDbContext<ShopContext>(options => options.UseSqlServer(build
 builder.Services.AddScoped<IOrdersDb, OrdersDb>();
 builder.Services.AddScoped<ITestsDb, TestsDb>();
 builder.Services.AddScoped<IScoresDb, ScoresDb>();
+
+builder.Services.AddTransient<IOrdersService, OrdersService>();
+builder.Services.AddTransient<IScoresService, ScoresService>();
+builder.Services.AddTransient<ITestsService, TestsService>();
+
 builder.Services.AddControllersWithViews();
 var app = builder.Build();
 

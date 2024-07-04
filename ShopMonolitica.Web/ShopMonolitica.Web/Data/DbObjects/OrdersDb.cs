@@ -14,7 +14,7 @@ namespace ShopMonolitica.Web.Data.DbObjects
         {
             _shopcontext = context;
         }
-        public OrdersGetModel GetOrdersModel(int orderid)
+        public OrdersGetModel GetOrder(int orderid)
         {
             var orders = _shopcontext.Orders.Find(orderid).ConvertOrdEntityOrdersModel();
             return orders;
@@ -44,6 +44,11 @@ namespace ShopMonolitica.Web.Data.DbObjects
                 _shopcontext.Orders.Update(ordersToUpdate);
                 _shopcontext.SaveChanges();
             }
+        }
+
+        public void RemoveOrders(OrdersRemoveModel ordersRemove)
+        {
+
         }
     }
 }

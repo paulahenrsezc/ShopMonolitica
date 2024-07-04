@@ -3,68 +3,156 @@
   "WorkspaceRootPath": "C:\\Shop\\ShopMonolitica.Web\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\views\\tests\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\views\\tests\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\extentions\\scoresextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\extentions\\scoresextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\extentions\\testsextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\extentions\\testsextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\extentions\\ordersextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\extentions\\ordersextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\interfaces\\iscoresdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\interfaces\\iscoresdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\interfaces\\itestsdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\interfaces\\itestsdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\models\\test\\testsbasemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\models\\test\\testsbasemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\models\\test\\testsgetmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\models\\test\\testsgetmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\dbobjects\\testsdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\dbobjects\\testsdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\dbobjects\\scoresdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\dbobjects\\scoresdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\controllers\\testscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\controllers\\testscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\controllers\\scorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\controllers\\scorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\views\\scores\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\views\\scores\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\views\\tests\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\views\\tests\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\views\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\views\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\views\\scores\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\views\\scores\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\context\\shopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\context\\shopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\controllers\\scorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\controllers\\scorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\controllers\\testscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\controllers\\testscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\dbobjects\\scoresdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\dbobjects\\scoresdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\bl\\services\\ordersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\bl\\services\\ordersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\bl\\services\\scoresservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\bl\\services\\scoresservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\bl\\services\\testsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\bl\\services\\testsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\bl\\interfaces\\itestsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\bl\\interfaces\\itestsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\models\\scores\\scoressavemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\models\\scores\\scoressavemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\dbobjects\\testsdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\dbobjects\\testsdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\interfaces\\itestsdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\interfaces\\itestsdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\interfaces\\iscoresdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\interfaces\\iscoresdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\bl\\interfaces\\iscoresservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\bl\\interfaces\\iscoresservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\bl\\interfaces\\iordersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\bl\\interfaces\\iordersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\interfaces\\iordersdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\interfaces\\iordersdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\models\\test\\testsremovemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\models\\test\\testsremovemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\dbobjects\\ordersdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\dbobjects\\ordersdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\models\\orders\\ordersgetmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\models\\orders\\ordersgetmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\models\\test\\testsgetmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\models\\test\\testsgetmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\models\\scores\\scoresremovemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\models\\scores\\scoresremovemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\models\\scores\\scoresupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\models\\scores\\scoresupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\models\\scores\\scoresgetmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\models\\scores\\scoresgetmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\views\\scores\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\views\\scores\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\models\\orders\\ordersremovemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\models\\orders\\ordersremovemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\bl\\core\\serviceresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\bl\\core\\serviceresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\entities\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\entities\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\entities\\scores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\entities\\scores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\extentions\\ordersextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\extentions\\ordersextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\extentions\\testsextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\extentions\\testsextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\extentions\\scoresextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\extentions\\scoresextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\views\\orders\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\views\\orders\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\models\\test\\testsbasemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\models\\test\\testsbasemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\views\\tests\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\views\\tests\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\views\\tests\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -75,24 +163,8 @@
       "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\views\\scores\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\entities\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\entities\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\models\\scores\\scoressavemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\models\\scores\\scoressavemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\models\\scores\\scoresbasemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\models\\scores\\scoresbasemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\entities\\scores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\entities\\scores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\data\\models\\scores\\scoresupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|solutionrelative:shopmonolitica.web\\data\\models\\scores\\scoresupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A77898EE-A39C-40D0-8F55-1182C7C31ECE}|ShopMonolitica.Web\\ShopMonolitica.Web.csproj|c:\\shop\\shopmonolitica.web\\shopmonolitica.web\\views\\scores\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -114,202 +186,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IScoresDb.cs",
-              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\interfaces\\IScoresDb.cs",
-              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\interfaces\\IScoresDb.cs",
-              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\interfaces\\IScoresDb.cs",
-              "RelativeToolTip": "ShopMonolitica.Web\\Data\\interfaces\\IScoresDb.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAAlAAAA",
+              "DocumentIndex": 7,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Controllers\\OrdersController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T17:58:50.517Z",
+              "WhenOpened": "2024-06-25T17:47:20.526Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "TestsBaseModel.cs",
-              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Test\\TestsBaseModel.cs",
-              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Models\\Test\\TestsBaseModel.cs",
-              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Test\\TestsBaseModel.cs",
-              "RelativeToolTip": "ShopMonolitica.Web\\Data\\Models\\Test\\TestsBaseModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T18:47:16.492Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TestsGetModel.cs",
-              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Test\\TestsGetModel.cs",
-              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Models\\Test\\TestsGetModel.cs",
-              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Test\\TestsGetModel.cs",
-              "RelativeToolTip": "ShopMonolitica.Web\\Data\\Models\\Test\\TestsGetModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T18:47:01.966Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TestsExtentions.cs",
-              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Extentions\\TestsExtentions.cs",
-              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Extentions\\TestsExtentions.cs",
-              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Extentions\\TestsExtentions.cs",
-              "RelativeToolTip": "ShopMonolitica.Web\\Data\\Extentions\\TestsExtentions.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T18:48:46.637Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OrdersExtentions.cs",
-              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Extentions\\OrdersExtentions.cs",
-              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Extentions\\OrdersExtentions.cs",
-              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Extentions\\OrdersExtentions.cs",
-              "RelativeToolTip": "ShopMonolitica.Web\\Data\\Extentions\\OrdersExtentions.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T18:00:59.907Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ScoresExtentions.cs",
-              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Extentions\\ScoresExtentions.cs",
-              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Extentions\\ScoresExtentions.cs",
-              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Extentions\\ScoresExtentions.cs",
-              "RelativeToolTip": "ShopMonolitica.Web\\Data\\Extentions\\ScoresExtentions.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAABZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T18:01:17.896Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TestsDb.cs",
-              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\DbObjects\\TestsDb.cs",
-              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\DbObjects\\TestsDb.cs",
-              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\DbObjects\\TestsDb.cs",
-              "RelativeToolTip": "ShopMonolitica.Web\\Data\\DbObjects\\TestsDb.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAhwBwAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T18:05:21.411Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Tests\\Index.cshtml",
-              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Views\\Tests\\Index.cshtml",
-              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Tests\\Index.cshtml*",
-              "RelativeToolTip": "ShopMonolitica.Web\\Views\\Tests\\Index.cshtml*",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAAABsAAABTAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-21T18:57:06.408Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ITestsDb.cs",
-              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\interfaces\\ITestsDb.cs",
-              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\interfaces\\ITestsDb.cs",
-              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\interfaces\\ITestsDb.cs",
-              "RelativeToolTip": "ShopMonolitica.Web\\Data\\interfaces\\ITestsDb.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAcAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T17:58:30.705Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ScoresDb.cs",
-              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\DbObjects\\ScoresDb.cs",
-              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\DbObjects\\ScoresDb.cs",
-              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\DbObjects\\ScoresDb.cs",
-              "RelativeToolTip": "ShopMonolitica.Web\\Data\\DbObjects\\ScoresDb.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAUwAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T18:04:47.808Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Tests\\Create.cshtml",
-              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Views\\Tests\\Create.cshtml",
-              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Tests\\Create.cshtml",
-              "RelativeToolTip": "ShopMonolitica.Web\\Views\\Tests\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-21T19:01:36.288Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "ScoresController.cs",
               "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Controllers\\ScoresController.cs",
               "RelativeDocumentMoniker": "ShopMonolitica.Web\\Controllers\\ScoresController.cs",
               "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Controllers\\ScoresController.cs",
               "RelativeToolTip": "ShopMonolitica.Web\\Controllers\\ScoresController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAQAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACIAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-21T18:07:43.436Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TestsController.cs",
-              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Controllers\\TestsController.cs",
-              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Controllers\\TestsController.cs",
-              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Controllers\\TestsController.cs",
-              "RelativeToolTip": "ShopMonolitica.Web\\Controllers\\TestsController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAApAAAA",
+              "DocumentIndex": 5,
+              "Title": "ShopContext.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Context\\ShopContext.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Context\\ShopContext.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Context\\ShopContext.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Data\\Context\\ShopContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T18:55:30.388Z",
+              "WhenOpened": "2024-06-26T01:10:17.023Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Scores\\Index.cshtml",
-              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Views\\Scores\\Index.cshtml",
-              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Scores\\Index.cshtml",
-              "RelativeToolTip": "ShopMonolitica.Web\\Views\\Scores\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAABUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-21T18:09:49.172Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ScoresGetModel.cs",
-              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresGetModel.cs",
-              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresGetModel.cs",
-              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresGetModel.cs",
-              "RelativeToolTip": "ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresGetModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAYAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T17:56:19.727Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 4,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Scores\\Create.cshtml",
               "RelativeDocumentMoniker": "ShopMonolitica.Web\\Views\\Scores\\Create.cshtml",
@@ -322,85 +238,397 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Tests\\Details.cshtml",
-              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Views\\Tests\\Details.cshtml",
-              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Tests\\Details.cshtml",
-              "RelativeToolTip": "ShopMonolitica.Web\\Views\\Tests\\Details.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAGAAAA",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Orders\\Index.cshtml",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Views\\Orders\\Index.cshtml",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Orders\\Index.cshtml",
+              "RelativeToolTip": "ShopMonolitica.Web\\Views\\Orders\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-21T18:59:06.979Z",
+              "WhenOpened": "2024-06-25T18:15:37.415Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Orders.cs",
-              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Entities\\Orders.cs",
-              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Entities\\Orders.cs",
-              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Entities\\Orders.cs",
-              "RelativeToolTip": "ShopMonolitica.Web\\Data\\Entities\\Orders.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAIAAAA",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Scores\\Index.cshtml",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Views\\Scores\\Index.cshtml",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Scores\\Index.cshtml*",
+              "RelativeToolTip": "ShopMonolitica.Web\\Views\\Scores\\Index.cshtml*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-21T18:09:49.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Tests\\Index.cshtml",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Views\\Tests\\Index.cshtml",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Tests\\Index.cshtml*",
+              "RelativeToolTip": "ShopMonolitica.Web\\Views\\Tests\\Index.cshtml*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-21T18:57:06.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Program.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Program.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Program.cs*",
+              "RelativeToolTip": "ShopMonolitica.Web\\Program.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T18:04:24.738Z",
+              "WhenOpened": "2024-06-25T16:51:43.349Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Scores\\Details.cshtml",
-              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Views\\Scores\\Details.cshtml",
-              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Scores\\Details.cshtml",
-              "RelativeToolTip": "ShopMonolitica.Web\\Views\\Scores\\Details.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-21T18:12:35.252Z",
+              "DocumentIndex": 8,
+              "Title": "TestsController.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Controllers\\TestsController.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Controllers\\TestsController.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Controllers\\TestsController.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Controllers\\TestsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T18:55:30.388Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 9,
+              "Title": "ScoresDb.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\DbObjects\\ScoresDb.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\DbObjects\\ScoresDb.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\DbObjects\\ScoresDb.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Data\\DbObjects\\ScoresDb.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAQwBMAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T18:04:47.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ITestsService.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\BL\\Interfaces\\ITestsService.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\BL\\Interfaces\\ITestsService.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\BL\\Interfaces\\ITestsService.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\BL\\Interfaces\\ITestsService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T15:48:01.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TestsService.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\BL\\Services\\TestsService.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\BL\\Services\\TestsService.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\BL\\Services\\TestsService.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\BL\\Services\\TestsService.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAowF4AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T15:52:46.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "OrdersService.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\BL\\Services\\OrdersService.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\BL\\Services\\OrdersService.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\BL\\Services\\OrdersService.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\BL\\Services\\OrdersService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAOQAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T15:40:23.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ScoresService.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\BL\\Services\\ScoresService.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\BL\\Services\\ScoresService.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\BL\\Services\\ScoresService.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\BL\\Services\\ScoresService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABgAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T15:52:00.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "ScoresSaveModel.cs",
               "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresSaveModel.cs",
               "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresSaveModel.cs",
               "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresSaveModel.cs",
               "RelativeToolTip": "ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresSaveModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAVAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-21T17:57:50.756Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ScoresBaseModel.cs",
-              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresBaseModel.cs",
-              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresBaseModel.cs",
-              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresBaseModel.cs",
-              "RelativeToolTip": "ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresBaseModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAATAAAA",
+              "DocumentIndex": 15,
+              "Title": "TestsDb.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\DbObjects\\TestsDb.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\DbObjects\\TestsDb.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\DbObjects\\TestsDb.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Data\\DbObjects\\TestsDb.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T17:55:43.751Z",
+              "WhenOpened": "2024-06-21T18:05:21.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ITestsDb.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\interfaces\\ITestsDb.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\interfaces\\ITestsDb.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\interfaces\\ITestsDb.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Data\\interfaces\\ITestsDb.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T17:58:30.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IScoresDb.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\interfaces\\IScoresDb.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\interfaces\\IScoresDb.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\interfaces\\IScoresDb.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Data\\interfaces\\IScoresDb.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T17:58:50.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IScoresService.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\BL\\Interfaces\\IScoresService.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\BL\\Interfaces\\IScoresService.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\BL\\Interfaces\\IScoresService.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\BL\\Interfaces\\IScoresService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T15:45:59.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IOrdersService.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\BL\\Interfaces\\IOrdersService.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\BL\\Interfaces\\IOrdersService.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\BL\\Interfaces\\IOrdersService.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\BL\\Interfaces\\IOrdersService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T15:35:03.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IOrdersDb.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\interfaces\\IOrdersDb.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\interfaces\\IOrdersDb.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\interfaces\\IOrdersDb.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Data\\interfaces\\IOrdersDb.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T18:00:56.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "TestsRemoveModel.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Test\\TestsRemoveModel.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Models\\Test\\TestsRemoveModel.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Test\\TestsRemoveModel.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Data\\Models\\Test\\TestsRemoveModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T15:50:59.785Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
+              "Title": "OrdersDb.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\DbObjects\\OrdersDb.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\DbObjects\\OrdersDb.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\DbObjects\\OrdersDb.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Data\\DbObjects\\OrdersDb.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwBAAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T04:41:19.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "OrdersGetModel.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Orders\\OrdersGetModel.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Models\\Orders\\OrdersGetModel.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Orders\\OrdersGetModel.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Data\\Models\\Orders\\OrdersGetModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T03:08:30.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "TestsGetModel.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Test\\TestsGetModel.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Models\\Test\\TestsGetModel.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Test\\TestsGetModel.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Data\\Models\\Test\\TestsGetModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T18:47:01.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ScoresRemoveModel.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresRemoveModel.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresRemoveModel.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresRemoveModel.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresRemoveModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T15:47:07.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ScoresGetModel.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresGetModel.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresGetModel.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresGetModel.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresGetModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAYAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T17:56:19.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "OrdersRemoveModel.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Orders\\OrdersRemoveModel.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Models\\Orders\\OrdersRemoveModel.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Orders\\OrdersRemoveModel.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Data\\Models\\Orders\\OrdersRemoveModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T15:37:31.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "ScoresUpdateModel.cs",
               "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresUpdateModel.cs",
               "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresUpdateModel.cs",
               "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresUpdateModel.cs",
               "RelativeToolTip": "ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresUpdateModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAVAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-21T17:57:58.409Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 29,
+              "Title": "ServiceResult.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\BL\\Core\\ServiceResult.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\BL\\Core\\ServiceResult.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\BL\\Core\\ServiceResult.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\BL\\Core\\ServiceResult.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T15:27:46.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Orders.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Entities\\Orders.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Entities\\Orders.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Entities\\Orders.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Data\\Entities\\Orders.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T18:04:24.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "TestsExtentions.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Extentions\\TestsExtentions.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Extentions\\TestsExtentions.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Extentions\\TestsExtentions.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Data\\Extentions\\TestsExtentions.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBIAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T18:48:46.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "OrdersExtentions.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Extentions\\OrdersExtentions.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Extentions\\OrdersExtentions.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Extentions\\OrdersExtentions.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Data\\Extentions\\OrdersExtentions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T18:00:59.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ScoresExtentions.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Extentions\\ScoresExtentions.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Extentions\\ScoresExtentions.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Extentions\\ScoresExtentions.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Data\\Extentions\\ScoresExtentions.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwAwAAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T18:01:17.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
               "Title": "Scores.cs",
               "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Entities\\Scores.cs",
               "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Entities\\Scores.cs",
@@ -413,7 +641,79 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 35,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Orders\\Create.cshtml",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Views\\Orders\\Create.cshtml",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Orders\\Create.cshtml",
+              "RelativeToolTip": "ShopMonolitica.Web\\Views\\Orders\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-21T19:48:05.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "TestsBaseModel.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Test\\TestsBaseModel.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Models\\Test\\TestsBaseModel.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Test\\TestsBaseModel.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Data\\Models\\Test\\TestsBaseModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T18:47:16.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Tests\\Create.cshtml",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Views\\Tests\\Create.cshtml",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Tests\\Create.cshtml",
+              "RelativeToolTip": "ShopMonolitica.Web\\Views\\Tests\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-21T19:01:36.288Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Tests\\Details.cshtml",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Views\\Tests\\Details.cshtml",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Tests\\Details.cshtml",
+              "RelativeToolTip": "ShopMonolitica.Web\\Views\\Tests\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-21T18:59:06.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Scores\\Details.cshtml",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Views\\Scores\\Details.cshtml",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Scores\\Details.cshtml",
+              "RelativeToolTip": "ShopMonolitica.Web\\Views\\Scores\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-21T18:12:35.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "ScoresBaseModel.cs",
+              "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresBaseModel.cs",
+              "RelativeDocumentMoniker": "ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresBaseModel.cs",
+              "ToolTip": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresBaseModel.cs",
+              "RelativeToolTip": "ShopMonolitica.Web\\Data\\Models\\Scores\\ScoresBaseModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T17:55:43.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Shop\\ShopMonolitica.Web\\ShopMonolitica.Web\\Views\\Scores\\Edit.cshtml",
               "RelativeDocumentMoniker": "ShopMonolitica.Web\\Views\\Scores\\Edit.cshtml",
@@ -421,8 +721,7 @@
               "RelativeToolTip": "ShopMonolitica.Web\\Views\\Scores\\Edit.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-21T18:16:16.937Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-21T18:16:16.937Z"
             }
           ]
         }
