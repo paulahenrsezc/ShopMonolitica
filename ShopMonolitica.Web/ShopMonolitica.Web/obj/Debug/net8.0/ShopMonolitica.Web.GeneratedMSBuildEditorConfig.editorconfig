@@ -66,6 +66,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcHBlcnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Shop/ShopMonolitica/ShopMonolitica.Web/ShopMonolitica.Web/Views/Shippers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcHBlcnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Shop/ShopMonolitica/ShopMonolitica.Web/ShopMonolitica.Web/Views/Shippers/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcHBlcnNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -33,6 +33,14 @@ namespace ShopMonolitica.Web.Data.DbObjects
             return shippers.ConvertShipEntityShippersModel();
         }
 
+        public void RemoveShippers(ShippersRemoveModel removeModel)
+        {
+            var shipper = _shopContext.Shippers.Find(removeModel.shipperid);
+            shipper = ValidarExistencia(removeModel.shipperid);
+            _shopContext.Shippers.Remove(shipper);
+            _shopContext.SaveChanges();
+        }
+
         public void SaveShippers(ShippersSaveModel shippers)
         {
             Shippers shippersEntity = shippers.ConvertShipSaveModelToShipperEntity();
@@ -50,5 +58,12 @@ namespace ShopMonolitica.Web.Data.DbObjects
                 _shopContext.SaveChanges();
             }
         }
+
+        private Shippers ValidarExistencia(int shipperid)
+        {
+            var shippers = _shopContext.Shippers.Find(shipperid);
+            return shippers;
+        }
+
     }
 };

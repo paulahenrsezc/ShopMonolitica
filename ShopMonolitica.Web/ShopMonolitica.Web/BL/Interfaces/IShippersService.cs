@@ -7,6 +7,7 @@ namespace ShopMonolitica.Web.BL.Interfaces
     {
         ServiceResult SaveShippers(ShippersSaveModel shippers);
         ServiceResult UpdateShippers(ShippersUpdateModel updateModel);
+        ServiceResult RemoveShippers(ShippersRemoveModel removeModel);
         ServiceResult GetShippers();
         ServiceResult GetShippersModel(int shipperid);
     }

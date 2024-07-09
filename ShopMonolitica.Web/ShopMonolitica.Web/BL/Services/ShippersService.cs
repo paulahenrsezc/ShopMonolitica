@@ -16,8 +16,8 @@ namespace ShopMonolitica.Web.BL.Services
 
         public ShippersService(IShippersDb shippersDb, ILogger<ShippersService> logger)
         {
-            this.shippersDb = shippersDb ?? throw new ShippersDbException(nameof(shippersDb));
-            this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            this.shippersDb = shippersDb;
+            this.logger = logger;
         }
 
         public ServiceResult GetShippers()
@@ -93,6 +93,29 @@ namespace ShopMonolitica.Web.BL.Services
             {
                 result.Success = false;
                 result.Message = "Ocurrió un error actualizando la shipper.";
+                logger.LogError(ex, result.Message);
+            }
+            return result;
+        }
+
+        public ServiceResult RemoveShippers(ShippersRemoveModel removeModel)
+        {
+            var result = new ServiceResult();
+            try
+            {
+                if (removeModel == null)
+                {
+                    result.Success = false;
+                    result.Message = "Indicar el campo a eliminar.";
+                    return result;
+                }
+                shippersDb.RemoveShippers(removeModel);
+                result.Success = true;
+            }
+            catch (Exception ex)
+            {
+                result.Success = false;
+                result.Message = "Ocurrió un error eliminando la categoría.";
                 logger.LogError(ex, result.Message);
             }
             return result;

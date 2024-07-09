@@ -28,24 +28,19 @@ namespace ShopMonolitica.Web.Data.DbObjects
         public CategoriesModel GetCategory(int categoryid)
         {
             var category = _shopContext.Categories.Find(categoryid);
-            if (category == null) 
-            { 
-                throw new CategoriesDbException($"ID no encontrado, {categoryid}"); 
+            if (category == null)
+            {
+                throw new CategoriesDbException($"ID no encontrado, {categoryid}");
             }
-           
-             return category.ConvertCatEntityCategoriesModel(); 
+
+            return category.ConvertCatEntityCategoriesModel();
         }
 
         public void RemoveCategories(CategoriesRemoveModel removeModel)
         {
             var category = _shopContext.Categories.Find(removeModel.categoryid);
-            if (category == null)
-            {
-                throw new CategoriesDbException("ID no encontrado");
-            }
-
-            Categories categoriesRemove = removeModel.ConvertCatRemoveModelToCategoriesEntity();
-            _shopContext.Categories.Remove(categoriesRemove);
+            category = ValidarExistencia(removeModel.categoryid);
+            _shopContext.Categories.Remove(category);
             _shopContext.SaveChanges();
 
         }
@@ -67,6 +62,12 @@ namespace ShopMonolitica.Web.Data.DbObjects
                 _shopContext.Categories.Update(categoriesToUpdate);
                 _shopContext.SaveChanges();
             }
+        }
+
+        private Categories ValidarExistencia(int categoryid)
+        {
+            var categories = _shopContext.Categories.Find(categoryid);
+            return categories;
         }
     }
 };

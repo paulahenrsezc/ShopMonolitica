@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using ShopMonolitica.Web.BL.Interfaces;
+using ShopMonolitica.Web.BL.Services;
 using ShopMonolitica.Web.Data.DbObjects;
 using ShopMonolitica.Web.Data.Entities;
 using ShopMonolitica.Web.Data.interfaces;
@@ -23,7 +24,7 @@ namespace ShopMonolitica.Web.Controllers
         public ActionResult Index()
         {
             var result = shippersService.GetShippers();
-            if(!result.Success)
+            if (!result.Success)
             {
                 ViewBag.Message = result.Message;
                 return View();
@@ -78,7 +79,7 @@ namespace ShopMonolitica.Web.Controllers
             {
                 return NotFound();
             }
-            var shippers=result.Data as ShippersModel;
+            var shippers = result.Data as ShippersModel;
 
             // Mapeo
             var shippersUpdateModel = new ShippersUpdateModel
@@ -111,6 +112,43 @@ namespace ShopMonolitica.Web.Controllers
             {
                 ModelState.AddModelError("", "Ocurrió un error mientras se actualizaba el shipper. Por favor, intenta nuevamente." + ex);
                 return View(shippersUpdateModel);
+            }
+        }
+
+        // GET: ShipperController/Delete/5
+        public ActionResult Delete(int id)
+        {
+            var result = shippersService.GetShippersModel(id);
+            if (!result.Success || result.Data == null)
+            {
+                return NotFound();
+            }
+
+            var model = new ShippersRemoveModel
+            {
+                shipperid = id
+            };
+
+            return View(model);
+        }
+
+        // POST: ShipperController/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            try
+            {
+                var ShipperRemove = new ShippersRemoveModel
+                {
+                    shipperid = id
+                };
+                this.shippersService.RemoveShippers(ShipperRemove);
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
             }
         }
     }

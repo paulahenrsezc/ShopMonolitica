@@ -151,31 +151,27 @@ namespace ShopMonolitica.Web.Controllers
                 return NotFound();
             }
 
-            var category = result.Data as CategoriesModel;
-            var categoryRemoveModel = new CategoriesRemoveModel
+            var model = new CategoriesRemoveModel
             {
-                categoryid = category.categoryid,
-                categoryname = category.categoryname,
-                description = category.description,
+                categoryid = id
             };
 
-            return View(categoryRemoveModel);
+            return View(model);
         }
 
         // POST: CategorieController/Delete/5
-        [HttpPost]
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(CategoriesRemoveModel categoriesRemoveModel)
+        public ActionResult DeleteConfirmeed(int id) 
         {
-            if (!ModelState.IsValid)
-            {
 
             try
             {
-                categoriesRemoveModel.deleted = true;
-                categoriesRemoveModel.delete_date = DateTime.Now;
-                categoriesRemoveModel.delete_user = GetCurrentUserId();
-                this.categoriesService.RemoveCategories(categoriesRemoveModel);
+                var CategoriesRemove = new CategoriesRemoveModel
+                {
+                    categoryid = id
+                };
+                this.categoriesService.RemoveCategories(CategoriesRemove);
                 return RedirectToAction(nameof(Index));
             }
             catch

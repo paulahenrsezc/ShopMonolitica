@@ -1,4 +1,5 @@
-﻿using ShopMonolitica.Web.Data.DbObjects;
+﻿using Humanizer.DateTimeHumanizeStrategy;
+using ShopMonolitica.Web.Data.DbObjects;
 using ShopMonolitica.Web.Data.Entities;
 using ShopMonolitica.Web.Data.Models;
 
@@ -47,6 +48,18 @@ namespace ShopMonolitica.Web.Data.Extentions
             model.companyname = model.companyname;
             model.phone = model.phone;
         }
+
+        public static Shippers ConvertShipRemoveModel(this ShippersRemoveModel removeModel)
+        {
+            return new Shippers 
+            {
+                shipperid = removeModel.shipperid,
+                companyname = removeModel.companyname,
+                phone = removeModel.phone
+
+            };
+        }
+
 
 
     }

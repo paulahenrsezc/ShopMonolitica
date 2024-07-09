@@ -31,6 +31,7 @@ namespace ShopMonolitica.Web.BL.Services
                 result.Success = false;
                 result.Message = "Ocurrió un error obteniendo las categorías.";
                 logger.LogError(ex, result.Message);
+  
             }
             return result;
         }
@@ -115,6 +116,7 @@ namespace ShopMonolitica.Web.BL.Services
                 result.Success = false;
                 result.Message = "Ocurrió un error eliminando la categoría.";
                 logger.LogError(ex, result.Message);
+
             }
             return result;
         }
@@ -128,5 +130,6 @@ namespace ShopMonolitica.Web.BL.Services
         {
             logger.LogError(ex, message);
         }
+
     }
 }
